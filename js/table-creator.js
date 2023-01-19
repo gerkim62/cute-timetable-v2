@@ -59,6 +59,7 @@ import {formatTimestamps, formatTimestamp} from './utils.js'
  */
  function fillBlankTimetable({blankTimetable, courses, unscheduledLabel}) {
   const finalTimetable = blankTimetable.cloneNode(true)
+  finalTimetable.classList.add('d-table', 'mx-auto')
   const caption = document.createElement('caption')
   caption.textContent = 'Gerison\'s Timetable'
   finalTimetable.appendChild(caption)
