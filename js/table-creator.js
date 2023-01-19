@@ -2,6 +2,7 @@ import {UNSCHEDULED_CLASS_LABEL} from './constants.js'
 import {getDays, getTimestamps} from './csvParser.js'
 import {formatTimestamps, formatTimestamp} from './utils.js'
 
+
 /**
  * createBlankTimetable - creates a blank timetable table
  * @param {Object} options - options for creating the timetable table
