@@ -154,7 +154,7 @@ function addStylingClasses(table, unscheduledLabel) {
 export default function createTimetable(courses){
   const days = getDays(courses)
   const formatedTimestamps = formatTimestamps(getTimestamps(courses))
-  const blankTimetable = createBlankTimetable({leftHeaders:days, topHeaders: formatTimestamps,blankCellLabel:UNSCHEDULED_CLASS_LABEL})
+  const blankTimetable = createBlankTimetable({leftHeaders:days, topHeaders: formatedTimestamps,blankCellLabel:UNSCHEDULED_CLASS_LABEL})
   
   const timetable = fillBlankTimetable({blankTimetable,courses,unscheduledLabel:UNSCHEDULED_CLASS_LABEL})
   return timetable
