@@ -55,7 +55,7 @@ export function cleanCSVString(rawCSVString) {
  */
 export function getCourses(cleanCSVString) {
   // Split the CSV into an array of rows
-  const rows = cleancsvString(cleanCSVString).split('\n');
+  const rows = cleanCSVString.split('\n');
   // Initialize an array to store the parsed objects
   const parsedObjects = [];
 
