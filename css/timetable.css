@@ -1,4 +1,4 @@
-#timetable-container{
+/*#timetable-container{
   overflow-x: scroll;
   padding: 5px;
   margin: 5px 0;
@@ -14,13 +14,13 @@
   position: relative;
   z-index: 201;
   
- /* box-shadow: inset rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, inset rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;*/
+ / * box-shadow: inset rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, inset rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;* /
   max-width: 100%;
   width: max-content;
   height: max-content;
 background: #001d54;
 
-}
+}*/
 
 table,
 table th{
@@ -151,7 +151,7 @@ th.day + td{
   border-left: 1.5px solid white;
 }
 
-/*card*/
+/*card
 .card {
   width: 200px;
   min-height: max-content;
@@ -223,7 +223,7 @@ th.day + td{
 }
 
 .card ul li p:hover{
-  /*background: rgba(0, 0, 0, 0.2);*/
+  /*background: rgba(0, 0, 0, 0.2);
 }
 
 
@@ -302,4 +302,4 @@ th.day + td{
   width: 100vw;
   height: 100vh;
   top:0;
-}
+}*/
