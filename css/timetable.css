@@ -96,7 +96,7 @@ table td.scheduled:hover::before {
   top: 50%;
   transform: translateY(-50%);
   background-image: linear-gradient(to right, #001d54 65%, transparent 50%);
-  padding-left: 10px;
+ 
 }
 
 table caption{
