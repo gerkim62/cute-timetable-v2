@@ -51,3 +51,12 @@ export function getFileExtension(file) {
   var fileExtension = fileNameParts[fileNameParts.length - 1];
   return fileExtension;
 }
+
+const formatTimestamp = timestamp => {
+  const start = convertTo12HourFormat(timestamp.start);
+  const end = convertTo12HourFormat(timestamp.end);
+  return `<p>${start}</p> <p>${end}</p>`;
+};
+export function formatTimestamps(timestamps){
+  return timestamps.map(timestamp => formatTimestamp(timestamp))
+}

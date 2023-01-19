@@ -1,3 +1,5 @@
+import {UNSCHEDULED_CLASS_LABEL} from './constants.js'
+
 /**
  * createBlankTimetable - creates a blank timetable table
  * @param {Object} options - options for creating the timetable table
@@ -7,7 +9,7 @@
  * @param {String} options.blankCellLabel - the label for the blank cells in the timetable table
  * @return {HTMLTableElement} - the created timetable table element
  */
-export function createBlankTimetable({ leftHeaders, topHeaders, intersection, blankCellLabel }) {
+ function createBlankTimetable({ leftHeaders, topHeaders, intersection='<p>Time</p> <p>Days</p>', blankCellLabel }) {
   const timetable_table = document.createElement('table')
 
 
@@ -53,7 +55,7 @@ export function createBlankTimetable({ leftHeaders, topHeaders, intersection, bl
  * @param {String} unscheduledLabel - the label to use for unscheduled cells
  * @return {HTMLTableElement} - the filled timetable table element
  */
-export function fillBlankTimetable(blankTimetable, courses, unscheduledLabel) {
+ function fillBlankTimetable({blankTimetable, courses, unscheduledLabel}) {
   const finalTimetable = blankTimetable.cloneNode(true)
   const caption = document.createElement('caption')
   caption.textContent = 'Gerison\'s Timetable'
@@ -145,4 +147,13 @@ function addStylingClasses(table, unscheduledLabel) {
 
     }
   }
+}
+
+export default function createTimetable(courses){
+  const days = getDays(courses)
+  const formatedTimestamps = formatTimestamps(getTimestamps(courses))
+  const blankTimetable = createBlankTimetable({leftHeaders:days, topHeaders: formatTimestamps,blankCellLabel:UNSCHEDULED_CLASS_LABEL})
+  
+  const timetable = fillBlankTimetable({blankTimetable,courses,unscheduledLabel:UNSCHEDULED_CLASS_LABEL})
+  return timetable
 }

@@ -1,5 +1,7 @@
 import {timetableDetails_form, csvUpload_input, timetableTitle_input, coursesIdentifier_select} from './dom.js'
-import {getCSVStringFrom} from './csvParser.js'
+import {getCSVStringFrom, cleanCSVString, getCourses, getDays, getTimestamps} from './csvParser.js'
+import {formatTimestamps} from './utils.js'
+import createTimetable from './table-creator.js'
 
 /*Event listeners*/
 /**
@@ -17,5 +19,9 @@ timetableDetails_form.addEventListener('submit', async (e)=>{
   const coursesIdentifier = coursesIdentifier_select.value
   
   const rawCsvString = await getCSVStringFrom(csvFile)
-  console.log(rawCsvString)
+  const cleanCSVString = cleanCSVString(rawCsvString)
+  
+  const courses = getCourses(cleanCSVString)
+  const timetable_table = createTimetable(courses)
+  console.log(timetable_table)
 })
