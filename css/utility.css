@@ -1,0 +1,34 @@
+.hidden{
+  display: none !important;
+}
+
+.fade-in{
+  animation-fill-mode: forwards;
+  animation: fadeIn 0s ease;
+  opacity: 0 !important;
+}
+
+.fade-out {
+  animation-fill-mode: forwards;
+  animation: fadeOut 0s ease;
+}
+
+@keyframes fadeOut{
+  100%{
+    opacity: 0.0;
+  }
+  /*90%{
+    opacity: .1;
+  }*/
+  0%{
+    opacity: 1;
+  }
+}
+@keyframes fadeIn{
+  100%{
+    opacity: 1;
+  }
+  0%{
+    opacity: 0;
+  }
+}

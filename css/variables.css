@@ -1,0 +1,159 @@
+:root {
+  /*UI Theme Colors: default*/
+  --color-primary: #6568d3;
+  --color-secondary: #f1fdf3;
+  --color-secondary:#f7fefd;
+  --color-accent:white;
+  --color-neutral:black;
+
+  /*Timetable Courses Colors*/
+  --color-course-1: #ea098c;
+  --color-course-2: #0291c8;
+  --color-course-3: #9d1f81;
+  --color-course-4: #5e2988;
+  --color-course-5: #b51d60;
+  --color-course-6: #33a04a;
+  --color-course-7: #c63e37;
+  --color-course-8: #536b2d;
+  --color-course-9: #20ade8;
+  --color-course-10: #92242d;
+  --color-course-11: #1e3f90;
+  
+
+}
+
+/*ocean-theme*/
+:root:has(input[value="ocean-theme"]:checked) {
+  --color-primary: #0077be;
+  --color-secondary: #e6f7ff;
+  --color-accent: #4db6ac;
+  --color-neutral: #333333;
+}
+
+/*desert-theme*/
+:root:has(input[value="desert-theme"]:checked) {
+  --color-primary: #e67e22;
+  --color-secondary: #fdf2e9;
+  --color-accent: #d35400;
+  --color-neutral: #555555;
+}
+
+/*forest-theme*/
+:root:has(input[value="forest-theme"]:checked) {
+  --color-primary: #2ecc71;
+  --color-secondary: #eafaf1;
+  --color-accent: #27ae60;
+  --color-neutral: #444444;
+}
+
+/*teal-theme*/
+:root:has(input[value="teal-theme"]:checked) {
+  --color-primary: #008080;
+  --color-secondary: #e0ffff;
+  --color-accent: #006666;
+  --color-neutral: #444444;
+}
+
+/*olive-theme*/
+:root:has(input[value="olive-theme"]:checked) {
+  --color-primary: #808000;
+  --color-secondary: #f5f5dc;
+  --color-accent: #556b2f;
+  --color-neutral: #666666;
+}
+
+/*maroon-theme*/
+:root:has(input[value="maroon-theme"]:checked) {
+  --color-primary: #800000;
+  --color-secondary: #f5f5f5;
+  --color-accent: #663399;
+  --color-neutral: #444444;
+}
+
+/*lime-theme*/
+:root:has(input[value="lime-theme"]:checked) {
+  --color-primary: #32cd32;
+  --color-secondary: #f0fff0;
+  --color-accent: #228b22;
+  --color-neutral: #444444;
+}
+
+/*orange-theme*/
+:root:has(input[value="orange-theme"]:checked) {
+  --color-primary: #ffa500;
+  --color-secondary: #fff5ee;
+  --color-accent: #ff7f50;
+  --color-neutral: #666666;
+}
+
+/*coral-theme*/
+:root:has(input[value="coral-theme"]:checked) {
+  --color-primary: #ff7f50;
+  --color-secondary: #fff5ee;
+  --color-accent: #dc143c;
+  --color-neutral: #666666;
+}
+
+/*navy-theme*/
+:root:has(input[value="navy-theme"]:checked) {
+  --color-primary: #3498db;
+  --color-secondary: #ecf0f1;
+  --color-accent: #2980b9;
+  --color-neutral: #555555;
+}
+
+/*purple-theme*/
+:root:has(input[value="purple-theme"]:checked) {
+  --color-primary: #9b59b6;
+  --color-secondary: #f3e5f5;
+  --color-accent: #8e44ad;
+  --color-neutral: #666666;
+}
+
+/*turquoise-theme*/
+:root:has(input[value="turquoise-theme"]:checked) {
+  --color-primary: #1abc9c;
+  --color-secondary: #e1f5fe;
+  --color-accent: #16a085;
+  --color-neutral: #444444;
+}
+
+/*pink-theme*/
+:root:has(input[value="pink-theme"]:checked) {
+  --color-primary: #e91e63;
+  --color-secondary: #fce4ec;
+  --color-accent: #c2185b;
+  --color-neutral: #555555;
+}
+
+/*plum-theme*/
+:root:has(input[value="plum-theme"]:checked) {
+  --color-primary: #9b59b6;
+  --color-secondary: #f3e5f5;
+  --color-accent: #8e44ad;
+  --color-neutral: #666666;
+}
+
+/*sky-theme*/
+:root:has(input[value="sky-theme"]:checked) {
+  --color-primary: #3498db;
+  --color-secondary: #ecf0f1;
+  --color-accent: #2980b9;
+  --color-neutral: #555555;
+}
+
+/*gold-theme*/
+:root:has(input[value="gold-theme"]:checked) {
+  --color-primary: #f1c40f;
+  --color-secondary: #fdf3e7;
+  --color-accent: #e67e22;
+  --color-neutral: #666666;
+}
+
+/*purple-sunshine*/
+:root:has(input[value="purple-sunshine"]:checked) {
+  --color-primary: #9b59b6;
+  --color-secondary: #ecf0f1;
+  --color-accent: #f1c40f;
+  --color-neutral: #34495e;
+}

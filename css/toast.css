@@ -1,0 +1,48 @@
+
+.toast {
+  visibility: hidden;
+  width: max-content;
+  max-width:90vw;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  text-align: center;
+  border-radius: 10px;
+  padding:10px 12.5px;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  font-size: 1rem;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.toast.show {
+  visibility: visible;
+  animation: fadein 0.5s;
+  animation-fill-mode: forwards;
+}
+.fade-out-toast{
+  animation: fadeout .5s ease;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+

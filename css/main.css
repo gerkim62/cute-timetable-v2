@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+
+body {
+  background: var(--color-secondary);
+  font-family: "Poppins", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  z-index: 205;
+  background: var(--color-secondary);
+}
+
+.header-space-replacement {
+  background: red;
+  height: 50px;
+  background: transparent;
+}
+
+.title {
+  position: relative;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  color: black;
+  z-index: 120000;
+  letter-spacing: 1px;
+}
+
+.title.secondary {
+  color: var(--color-accent);
+  position: absolute;
+  top: 10px;
+}
+
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0px;
+  /*display: none;*/
+
+  font-family: "Poppins", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.upload-message {
+  max-width: 80vw;
+  text-align: center;
+  
+  margin: 10px;
+  margin-top: 5px;
+  color: black;
+  font-weight: bold;
+  letter-spacing: .5px;
+  font-weight: 400;
+  color: var(--color-primary);
+color: black;
+  font-family: "Poppins", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*
+.file-upload button{
+  padding:7.5px 20px;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 20px;
+  border: 1px solid;
+  margin: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Papyrus";
+  outline: none;
+}*/
+
+button:hover {
+  animation: bubbleOut .7s;
+}
+
+button:active {
+  animation: bubbleIn .7s;
+}
+
+#csv-upload {
+  width: 50vw;
+  min-width: 200px;
+  margin: 5px;
+  text-transform: uppercase;
+  padding: 5px;
+  border-radius: -5px;
+
+  font-family: "Poppins", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.upload {
+  margin: 20px;
+
+  font-family: "Poppins", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.upload-btn,
+.custom-button {
+  padding: 10px;
+  color: white;
+  background: var(--color-primary);
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  transition: .7s;
+  outline: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  font-family: "Poppins", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.upload-btn {
+  padding: 10px 20px;
+  margin-top: 30px;
+  display: none;
+
+  font-family: "Poppins", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.custom-button {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border: 1px solid;
+
+  font-family: "Poppins", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#custom-text {
+  margin-left: 10px;
+  font-family: sans-serif;
+  color: #aaa;
+  font-family: "Poppins", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+@keyframes bubbleOut {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
+
+@keyframes bubbleIn {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(.8);
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
+
+.cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cta-buttons button {
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-weight: normal;
+
+}
+
+.cta-buttons button i {
+  font-size: .7rem;
+  margin-right: 5px;
+}
+
+.cta-buttons button:first-child i {
+  font-size: .8rem;
+
+}
+
+.cta-buttons button:first-child {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+/*
+.cta-buttons button:last-child:hover {
+ background: var(--color-primary);
+ color: var(--color-secondary);
+}
+.cta-buttons button:first-child:hover {
+  color: var(--color-primary);
+  background: var(--color-secondary);
+}*/
+
+/*custom install popup*/
+.custom-install-ui {
+  background: rgba(255, 255, 255, .2);
+  position: absolute;
+  inset: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.custom-install-ui .ui {
+  background: var(--color-secondary);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-15%);
+  color: var(--color-primary);
+  font-weight: thin;
+  letter-spacing: .5px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.custom-install-ui p {
+  margin-bottom: 20px;
+  font-size: 1.01rem;
+}
+
+.custom-install-ui .buttons {
+  display: flex;
+  justify-content: space-between
+}
+
+.custom-install-ui button {
+  padding: 10px;
+  color: white;
+  background: var(--color-primary);
+  border-radius: 10px;
+  border: .5px solid;
+  cursor: pointer;
+  transition: .7s;
+  outline: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+}
+
+.custom-install-ui .not-now {
+  background: transparent;
+  color: var(--color-primary);
+  font-weight: 100;
+}
+
+
+
+/* Style the container for the radio buttons */
+#themes-container {
+  position: absolute;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  grid-template-columns: repeat(1, 1fr);
+  height: calc(100vh - 50px);
+  background: #f1fdf3;
+  width: max-content;
+  margin: 0;
+  margin-left: 0;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  padding: 5px 0;
+  transform: translate(0%);
+
+  z-index: 100969449494;
+  transition: .34s !important;
+}
+
+/*#themes-container.showing {
+  animation: showThemePicker 100ms ease !important;
+  animation-fill-mode: forwards;
+}*/
+
+#themes-container .overlay {
+  position: absolute;
+  right: -80%;
+  background: rgba(0, 0, 0, 0.01);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  inset: 0;
+  top: 0;
+  left: 100%;
+  right: 0;
+  bottom: 0;
+  width: calc(100vw - 100%);
+  height: 100%;
+  z-index: -10;
+
+}
+
+/* Style the radio buttons themselves */
+#themes-container input[type="radio"] {
+  display: none;
+}
+
+/* Style the radio button labels */
+#themes-container label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  font-size: 16px;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: transparent;
+  user-select: none;
+  transition: 1s;
+  margin: 5px;
+}
+
+/* Style the radio button "bullets" */
+#themes-container label:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  border: 0.5px solid white;
+}
+
+/* Style the radio button "bullets" when they are selected */
+#themes-container input[type="radio"]:checked+label:before {
+  /*background-color: #f1fdf3;*/
+  width: 50%;
+  height: 50%;
+  border: 4px solid white;
+}
+
+@keyframes showThemePicker {
+  100% {
+    transform: translate(0%) !important;
+  }
+}
+
+@keyframes hideThemePicker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.themes-container-opener {
+  position: absolute !important;
+  z-index: 99;
+  background: var(--color-secondary);
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  color: var(--color-primary);
+  border: 0px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 10px;
+  left: 5px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  transform: scale(.5);
+  transition: .35s;
+}
