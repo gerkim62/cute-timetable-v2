@@ -69,6 +69,7 @@ import {formatTimestamps, formatTimestamp} from './utils.js'
 
       const target_td = finalTimetable.querySelector(`[data-top-header="${formartedTimestamp}"][data-left-header="${day.name}"]`);
       target_td.textContent = course[coursesIdentifier]
+      console.log(course[coursesIdentifier], course)
       target_td.setAttribute(`data-color`, course.color);
       target_td.style.backgroundColor = `var(${course.color})`
     })
