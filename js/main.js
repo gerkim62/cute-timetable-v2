@@ -4,7 +4,7 @@ import {timetableDetails_form, csvUpload_input, timetableTitle_input, coursesIde
 timetableDetails_form.addEventListener('submit', (e)=>{
   e.preventDefault()
   
-  const csvFile = csvUpload_input.value
+  const csvFile = csvUpload_input.files[0]
   
   console.log({csvFile})
 })
