@@ -84,12 +84,17 @@ table td {
   padding: 5px;
   font-size: .75rem;
   white-space: nowrap;
+  position: relative;
 }
 
 table td.scheduled:hover::before {
   content: "\f0a4";
   font-family: "Font Awesome 5 Free";
   color: yellow;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 table caption{
