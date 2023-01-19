@@ -95,7 +95,7 @@ table td.scheduled:hover::before {
   left: -8px;
   top: 50%;
   transform: translateY(-50%);
-  background-image: linear-gradient(to right, #001d54 60%, transparent 50%);;
+  background-image: linear-gradient(to right, #001d54 70%, transparent 50%);;
 }
 
 table caption{
