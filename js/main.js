@@ -1,10 +1,21 @@
 import {timetableDetails_form, csvUpload_input, timetableTitle_input, coursesIdentifier_select} from './dom.js'
+import {getCSVStringFrom} from './csvParser.js'
 
 /*Event listeners*/
-timetableDetails_form.addEventListener('submit', (e)=>{
+/**
+
+@event
+@listens submit - listens for the submit event on the timetableDetails_form element
+@param {Event} e - The submit event
+This function is triggered when the timetableDetails_form is submitted. It gets the files from the csvUpload_input, the value of the timetableTitle_input and the selected value of the coursesIdentifier_select...
+*/
+timetableDetails_form.addEventListener('submit', async (e)=>{
   e.preventDefault()
   
   const csvFile = csvUpload_input.files[0]
+  const timetableTitle = timetableTitle_input.value
+  const coursesIdentifier = coursesIdentifier_select.value
   
-  console.log({csvFile})
+  const rawCsvString = await getCSVStringFrom(csvFile)
+  console.log(rawCsvString)
 })
