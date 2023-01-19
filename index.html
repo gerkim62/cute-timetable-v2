@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Timetable Beautifier by Gerison</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+
+  <script defer src="https://kit.fontawesome.com/ec6d630e9e.js" crossorigin="anonymous"></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+  <nav class="expanded navbar navbar-expand-lg navbar-light bg-light shadow-sm p-2">
+    <a class="navbar-brand" href="#">Cute Timetable</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Support Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Suggestions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Report an Error</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <p class="mt-3 text-success fs-6">🎉Upload CSV to generate your timetable.🎊</p>
+        <form id="timetable-details">
+          <div class="form-group mt-2 mb-4">
+            <label for="csv-file">Upload CSV file <b class="text-danger">*</b></label>
+
+            <div class="input-group mb-3">
+              <input  type="file" class="form-control mb-1" id="csv-file">
+
+            </div>
+
+          </div>
+          <div class="form-group my-4">
+            <label for="timetable-title">Enter the Timetable Title <b class="text-danger">*</b></label>
+            <input id="timetable-title" placeholder="e.g Gerison's Timetable" type="text" class="form-control">
+          </div>
+          <div class="form-group my-4">
+            <label for="courses-identifier">Courses Identifier <b class="text-success">*</b></label>
+            <select id="courses-identifier"  class="form-control" id="timetableName">
+              <option value="id" selected>Course ID </option>
+              <option value="title">Title</option>
+              <option value="venue">Venue</option>
+              <option value="location">Location</option>
+              <option value="building">Building</option>
+            </select>
+            <p><b></b></p>
+          </div>
+
+          <button type="submit" class="btn btn-success ">Generate Timetable</button>
+        </form>
+        <p class="my-2">
+          <br><b>READ CAREFULLY:</b> Please do not upload the timetable as a PDF or any other format apart from <a class="text-dark" href="#"><u><i>CSV format</i></u></a>, because it will not work. <br><br><u><b><a class="">See how to download CSV step-by-step</a></b></u> <i class="fas fa-external-link-alt"></i>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="page-footer fixed-bottom bg-light d-flex align-items-center justify-content-between flex-column py-1">
+    <div class="container text-center text-muted">
+      Copyright &copy; Gerison 2022. All rights reserved.
+    </div>
+    <div class="d-flex">
+      <a href="https://facebook.com/gerison" class="text-muted mx-3">
+        <i class="fab fa-facebook fa-1x"></i>
+      </a>
+      <a href="https://twitter.com/gerison" class="text-muted mx-3">
+        <i class="fab fa-twitter fa-1x"></i>
+      </a>
+      <a href="https://whatsapp.com/gerison" class="text-muted mx-3">
+        <i class="fab fa-whatsapp fa-1x"></i>
+      </a>
+      <a href="https://github.com/gerison" class="text-muted mx-3">
+        <i class="fab fa-github fa-1x"></i>
+      </a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
