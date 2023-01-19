@@ -1,6 +1,5 @@
 import {timetableDetails_form, csvUpload_input, timetableTitle_input, coursesIdentifier_select} from './dom.js'
 import {getCSVStringFrom, cleanCSVString, getCourses, getDays, getTimestamps} from './csvParser.js'
-import {formatTimestamps} from './utils.js'
 import createTimetable from './table-creator.js'
 
 /*Event listeners*/
