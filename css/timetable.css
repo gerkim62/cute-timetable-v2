@@ -92,7 +92,7 @@ table td.scheduled:hover::before {
   font-family: "Font Awesome 5 Free";
   color: yellow;
   position: absolute;
-  left: 0;
+  left: -5px;
   top: 50%;
   transform: translateY(-50%);
 }
