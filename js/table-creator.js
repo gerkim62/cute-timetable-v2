@@ -57,18 +57,18 @@ import {formatTimestamps, formatTimestamp} from './utils.js'
  * @param {String} unscheduledLabel - the label to use for unscheduled cells
  * @return {HTMLTableElement} - the filled timetable table element
  */
- function fillBlankTimetable({blankTimetable, courses, unscheduledLabel}) {
+ function fillBlankTimetable({blankTimetable, courses, unscheduledLabel, title, coursesIdentifier}) {
   const finalTimetable = blankTimetable.cloneNode(true)
   //finalTimetable.classList.add('d-table', 'mx-auto')
   const caption = document.createElement('caption')
-  caption.textContent = 'Gerison\'s Timetable'
+  caption.textContent = title
   finalTimetable.appendChild(caption)
   courses.forEach(course => {
     course.days.forEach(day => {
       const formartedTimestamp = formatTimestamp(day.timestamps)
 
       const target_td = finalTimetable.querySelector(`[data-top-header="${formartedTimestamp}"][data-left-header="${day.name}"]`);
-      target_td.textContent = course.code
+      target_td.textContent = course[coursesIdentifier]
       target_td.setAttribute(`data-color`, course.color);
       target_td.style.backgroundColor = `var(${course.color})`
     })
@@ -152,11 +152,11 @@ function addStylingClasses(table, unscheduledLabel) {
   }
 }
 
-export default function createTimetable(courses){
+export default function createTimetable(courses, title, coursesIdentifier){
   const days = getDays(courses)
   const formatedTimestamps = formatTimestamps(getTimestamps(courses))
   const blankTimetable = createBlankTimetable({leftHeaders:days, topHeaders: formatedTimestamps,blankCellLabel:UNSCHEDULED_CLASS_LABEL})
   
-  const timetable = fillBlankTimetable({blankTimetable,courses,unscheduledLabel:UNSCHEDULED_CLASS_LABEL})
+  const timetable = fillBlankTimetable({blankTimetable,courses,unscheduledLabel:UNSCHEDULED_CLASS_LABEL, title, coursesIdentifier})
   return timetable
 }

@@ -21,7 +21,7 @@ timetableDetails_form.addEventListener('submit', async (e)=>{
   const cleanedCSVString = cleanCSVString(rawCsvString)
   
   const courses = getCourses(cleanedCSVString)
-  const timetable_table = createTimetable(courses)
+  const timetable_table = createTimetable(courses,timetableTitle, coursesIdentifier)
   
   timetableContainer_div.append(timetable_table)
   

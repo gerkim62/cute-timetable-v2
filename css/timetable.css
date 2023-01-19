@@ -106,6 +106,8 @@ table caption{
   border-bottom: 1px solid white;
   letter-spacing: .5px;
   padding:2.5px;
+  caption-side: top;
+  text-align: center;
 }
 
 
