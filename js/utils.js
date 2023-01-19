@@ -52,7 +52,7 @@ export function getFileExtension(file) {
   return fileExtension;
 }
 
-const formatTimestamp = timestamp => {
+export const formatTimestamp = timestamp => {
   const start = convertTo12HourFormat(timestamp.start);
   const end = convertTo12HourFormat(timestamp.end);
   return `<p>${start}</p> <p>${end}</p>`;
