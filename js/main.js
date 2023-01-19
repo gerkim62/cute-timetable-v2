@@ -22,7 +22,7 @@ timetableDetails_form.addEventListener('submit', async (e)=>{
   
   const courses = getCourses(cleanedCSVString)
   const timetable_table = createTimetable(courses,timetableTitle, coursesIdentifier)
-  
+  console.log(coursesIdentifier)
   timetableContainer_div.append(timetable_table)
   
 })
