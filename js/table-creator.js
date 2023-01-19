@@ -23,7 +23,6 @@ import {formatTimestamps, formatTimestamp} from './utils.js'
   topHeaders_tr.append(intersection_th)
 
   timetable_table.append(topHeaders_tr)
-  console.log(topHeaders)
   topHeaders.forEach(topHeader => {
     const topHeader_th = document.createElement('th')
     topHeader_th.innerHTML = topHeader
