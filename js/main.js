@@ -19,9 +19,9 @@ timetableDetails_form.addEventListener('submit', async (e)=>{
   const coursesIdentifier = coursesIdentifier_select.value
   
   const rawCsvString = await getCSVStringFrom(csvFile)
-  const cleanCSVString = cleanCSVString(rawCsvString)
+  const cleanedCSVString = cleanCSVString(rawCsvString)
   
-  const courses = getCourses(cleanCSVString)
+  const courses = getCourses(cleanedCSVString)
   const timetable_table = createTimetable(courses)
   console.log({timetable_table})
 })
