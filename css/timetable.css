@@ -114,7 +114,7 @@ table caption{
 
 table td:hover{
 font-weight: bolder;
-border-color: yellow;
+border:1px solid yellow;
 }
 
 table td.following-unscheduled {
