@@ -1,4 +1,4 @@
-import {timetableDetails_form, csvUpload_input, timetableTitle_input, coursesIdentifier_select, timetableContainer_div} from './dom.js'
+import {timetableDetails_form, csvUpload_input, timetableTitle_input, coursesIdentifier_select, timetableContainer_div, timetableContainer_div} from './dom.js'
 import {getCSVStringFrom, cleanCSVString, getCourses, getDays, getTimestamps} from './csvParser.js'
 import createTimetable from './table-creator.js'
 
@@ -22,7 +22,10 @@ timetableDetails_form.addEventListener('submit', async (e)=>{
   
   const courses = getCourses(cleanedCSVString)
   const timetable_table = createTimetable(courses,timetableTitle, coursesIdentifier)
-  console.log(coursesIdentifier)
+  if(timetable_table){
+    timetableContainer_div.setAttribute('hidden','')
+    timetableContainer_div.removeAttribute('hidden')
+  }
   timetableContainer_div.append(timetable_table)
   
 })
