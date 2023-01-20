@@ -25,7 +25,8 @@ timetableDetails_form.addEventListener('submit', async (e)=>{
   if(timetable_table){
     timetableContainer_div.setAttribute('hidden','')
     timetableContainer_div.removeAttribute('hidden')
-  }
+  
   timetableContainer_div.append(timetable_table)
+  }
   
 })
