@@ -85,6 +85,7 @@ table td {
   font-size: .75rem;
   white-space: nowrap;
   position: relative;
+  border: 1px solid #001d54;
 }
 
 table td.scheduled:hover::before {
@@ -95,7 +96,7 @@ table td.scheduled:hover::before {
   left: -8px;
   top: 50%;
   transform: translateY(-50%);
-  background-image: linear-gradient(to right, #001d54 65%, transparent 50%);
+ /* background-image: linear-gradient(to right, #001d54 65%, transparent 50%);*/
  
 }
 
