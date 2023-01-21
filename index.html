@@ -23,34 +23,37 @@
 </head>
 
 <body>
-  <nav class="expanded navbar navbar-expand-lg navbar-light bg-light shadow-sm p-2">
+
+  <nav style="position: fixed;width:100%;z-index:10" class="expanded navbar navbar-fixed-top navbar-expand-lg navbar-light bg-light shadow-sm p-2">
     <a class="navbar-brand" href="#">Cute Timetable</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+    <div style="transition: all 1s ease" class="collapse navbar-collapse" id="navbarNav">
+<ul class="container navbar-nav px-2">
         <li class="nav-item">
-          <a class="nav-link" href="#">Support Me</a>
+          <a class="nav-link" href="pages/donate.html"><i class="fas fa-donate"></i> Donate</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Me</a>
+          <a class="nav-link" href="pages/contact.html"><i class="fas fa-envelope"></i> Contact Me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Suggestions</a>
+          <a class="nav-link" href="pages/suggestions.html"><i class="fas fa-lightbulb"></i> Suggestions</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Report an Error</a>
+          <a class="nav-link" href="pages/error-report.html"><i class="fas fa-exclamation-triangle"></i> Report an Error</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="pages/about.html"><i class="fas fa-info-circle"></i> About</a>
         </li>
       </ul>
     </div>
 
   </nav>
+    <div style="height: 60px"></div>
+    <div hidden style="height: 100vh;width: 100vw; position: absolute; top:0;left:0; background:rgba(0,0,0,.5);z-index:3" id="nav-overlay"></div>
 
-<div hidden id="timetable-container" class="container table-responsive">
+<div hidden class="container table-responsive">
   <div style="background: #001d54" class="d-table mx-auto p-4" id="timetable-container"></div>
 </div>
 
@@ -90,7 +93,7 @@
           <button type="submit" class="btn btn-success ">Generate Timetable</button>
         </form>
         <p class="my-2 mb-5">
-          <br><b>READ CAREFULLY:</b> Please do not upload the timetable as a PDF or any other format apart from <a class="text-dark" href="#"><u><i>CSV format</i></u></a>, because it will not work. <br><br><u><b><a class="">See how to download CSV step-by-step</a></b></u> <i class="fas fa-external-link-alt"></i>
+          <br><b>READ CAREFULLY:</b> Please do not upload the timetable as a PDF or any other format apart from <a class="text-dark" href="pages/how-to-download-csv.html"><u><i>CSV format</i></u></a>, because it will not work. <br><br><u><b><a href="pages/how-to-download-csv.html" class="">See how to download CSV step-by-step</a></b></u> <i class="fas fa-external-link-alt"></i>
         </p>
       </div>
 
@@ -116,6 +119,20 @@
       </a>
     </div>
   </footer>
+
+  <script>
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navOverlay = document.getElementById('nav-overlay')
+    
+    function toggleNavbar() {
+      navbarCollapse.classList.toggle('collapse');
+      navOverlay.hidden = !navOverlay.hidden
+    }
+    
+    navbarToggler.addEventListener('click', toggleNavbar);
+    navOverlay.addEventListener('click', toggleNavbar)
+  </script>
 
 </body>
 

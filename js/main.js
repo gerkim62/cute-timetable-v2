@@ -30,3 +30,4 @@ timetableDetails_form.addEventListener('submit', async (e) => {
   }
 
 })
+
