@@ -16,10 +16,11 @@
     //form
     const form = document.querySelector("form");
   if(form)  form.addEventListener("submit", async (event) => {
+    showLoader()
       event.preventDefault();
-     showLoader()
+     
       try {
-        const response = await fetchViaProxy("https://formspree.io/f/xgebejgr", {
+        const response = await fetchViaProxy("https://formspree.io/f/mlekdzoa", {
           method: "POST",
           body: new FormData(form)
           
