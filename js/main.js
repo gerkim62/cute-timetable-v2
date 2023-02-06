@@ -22,7 +22,7 @@ timetableDetails_form.addEventListener('submit', async (e) => {
 
   const courses = getCourses(cleanedCSVString)
   const timetable_table = createTimetable(courses, timetableTitle, coursesIdentifier)
-  console.log(timetable_table)
+  //console.log(timetable_table)
   if (timetable_table) {
     timetableDetails_form.setAttribute('hidden', '')
     timetableContainer_div.removeAttribute('hidden')
