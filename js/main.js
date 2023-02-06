@@ -14,7 +14,7 @@ timetableDetails_form.addEventListener('submit', async (e) => {
   e.preventDefault()
 
   const csvFile = csvUpload_input.files[0]
-  const timetableTitle = timetableTitle_input.value
+  const timetableTitle = timetableTitle_input.value || 'My Timetable'
   const coursesIdentifier = coursesIdentifier_select.value.trim()
 
   const rawCsvString = await getCSVStringFrom(csvFile)
