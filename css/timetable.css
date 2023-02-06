@@ -64,6 +64,7 @@ table tfoot{
   position: relative;
   z-index: 9;
   height:35px;
+  display: table-footer-group;
 }
 
 tfoot td{
