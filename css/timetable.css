@@ -105,6 +105,12 @@ table td.scheduled:hover::before {
  
 }
 
+table tfoot td.scheduled:hover::before {
+  content: "";
+  display:none;
+
+}
+
 table caption{
   background: #001d54;
   color: yellow;
