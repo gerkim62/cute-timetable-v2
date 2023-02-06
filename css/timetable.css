@@ -81,6 +81,7 @@ tfoot p{
   color: yellow;
   text-align: center;
   font-weight: normal;
+  margin:0;
 }
 
 table td {
