@@ -20,6 +20,15 @@
     <script>
       eruda.init();
     </script>
+    
+    <style>
+  @media only screen and (max-width: 375px) {
+ .table-responsive {
+    background: #001d54;
+  }
+}
+
+</style>
 </head>
 
 <body>
@@ -56,9 +65,10 @@
     <div style="background:transparent;height: 56px"></div>
     <div hidden style="height: 100vh;width: 100vw; position: absolute; top:0;left:0; background:rgba(0,0,0,.5);z-index:3" id="nav-overlay"></div>
 
-<div style="background: #001d54ggg" hidden-here class="container table-responsive">
+<div  hidden-here class="container table-responsive">
   <div style="background: #001d54" class="d-table mx-auto p-3" id="timetable-container"></div>
 </div>
+
 
 
   <div id="form-container" class="container overflow-auto">
