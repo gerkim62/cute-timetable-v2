@@ -74,6 +74,7 @@ tfoot td{
 
 tfoot {
   background: #001d54;
+  background: red;
   transform: translateY(-1px);
 }
 
