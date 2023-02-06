@@ -68,6 +68,7 @@ table tfoot{
 
 tfoot td{
   outline: none;
+  height: 5px;
 }
 
 tfoot {

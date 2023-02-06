@@ -160,6 +160,6 @@ export default function createTimetable(courses, title, coursesIdentifier){
   
   const timetable = fillBlankTimetable({blankTimetable,courses,unscheduledLabel:UNSCHEDULED_CLASS_LABEL, title, coursesIdentifier})
   
-  console.log(timetable)
+  console.log()
   return timetable
 }
