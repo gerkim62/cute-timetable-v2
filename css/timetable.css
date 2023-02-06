@@ -63,7 +63,7 @@ table tfoot{
   color: yellow !important;
   position: relative;
   z-index: 9;
-  
+  height:35px;
 }
 
 tfoot td{
