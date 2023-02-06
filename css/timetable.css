@@ -66,6 +66,10 @@ table tfoot{
   
 }
 
+tfoot td{
+  outline: none;
+}
+
 tfoot {
   background: #001d54;
   transform: translateY(-1px);
@@ -112,10 +116,11 @@ table caption{
 }
 
 
-table td:hover{
-font-weight: bolder;
-outline:1px solid yellow;
+table td:not(tfoot td):hover {
+  font-weight: bolder;
+  outline: 1px solid yellow;
 }
+
 
 table td.following-unscheduled {
   border-left: 1px solid rgba(255, 255, 255, .5);
