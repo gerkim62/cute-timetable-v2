@@ -159,5 +159,7 @@ export default function createTimetable(courses, title, coursesIdentifier){
   const blankTimetable = createBlankTimetable({leftHeaders:days, topHeaders: formatedTimestamps,blankCellLabel:UNSCHEDULED_CLASS_LABEL})
   
   const timetable = fillBlankTimetable({blankTimetable,courses,unscheduledLabel:UNSCHEDULED_CLASS_LABEL, title, coursesIdentifier})
+  
+  console.log(timetable)
   return timetable
 }
