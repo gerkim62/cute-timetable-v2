@@ -9,26 +9,26 @@
   <title>Timetable Beautifier by Gerison</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-  
+
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/timetable.css">
 
   <script defer src="https://kit.fontawesome.com/ec6d630e9e.js" crossorigin="anonymous"></script>
   <script type="module" src="js/main.js"></script>
-  
-    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-    <script>
-      eruda.init();
-    </script>
-    
-    <style>
-  @media only screen and (max-width: 375px) {
- .table-responsive {
-    background: #001d54;
-  }
-}
 
-</style>
+  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+  <script>
+    eruda.init();
+  </script>
+
+  <style>
+    @media only screen and (max-width: 375px) {
+      .table-responsive {
+        background: #001d54;
+      }
+
+    }
+  </style>
 </head>
 
 <body>
@@ -39,10 +39,10 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div style="transition: all 1s ease" class="collapse navbar-collapse" id="navbarNav">
-<ul class="container navbar-nav px-2">
-          <li class="nav-item">
-            <a class="nav-link" href="/"><i class="fas fa-home"></i> Home</a>
-          </li>
+      <ul class="container navbar-nav px-2">
+        <li class="nav-item">
+          <a class="nav-link" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="pages/donate.html"><i class="fas fa-donate"></i> Donate</a>
         </li>
@@ -50,7 +50,7 @@
           <a class="nav-link" href="pages/contact.html"><i class="fas fa-envelope"></i> Contact Me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/suggestions.html"><i class="fas fa-lightbulb"></i>  Suggestions</a>
+          <a class="nav-link" href="pages/suggestions.html"><i class="fas fa-lightbulb"></i> Suggestions</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="pages/error-report.html"><i class="fas fa-exclamation-triangle"></i> Report an Error</a>
@@ -62,13 +62,34 @@
     </div>
 
   </nav>
-    <div style="background:transparent;height: 56px"></div>
-    <div hidden style="height: 100vh;width: 100vw; position: absolute; top:0;left:0; background:rgba(0,0,0,.5);z-index:3" id="nav-overlay"></div>
+  <div style="background:transparent;height: 56px"></div>
+  <div hidden style="height: 100vh;width: 100vw; position: absolute; top:0;left:0; background:rgba(0,0,0,.5);z-index:3" id="nav-overlay"></div>
 
-<div  hidden-here class="container table-responsive">
-  <div style="background: #001d54" class="d-table mx-auto p-3" id="timetable-container"></div>
-</div>
+  <div hidden-here class="d-flex align-items-center justify-content-center | container table-responsive">
+    <div style="background: #001d54" class="d-table mx-auto p-3" id="timetable-container"></div>
+  </div>
 
+  <div class="my-2 container d-flex justify-content-between">
+    <button class="btn btn-outline-primary">
+      <i class="fas fa-download"></i> Download
+    </button>
+    <button class="btn btn-outline-success">
+      <i class="fas fa-plus-circle"></i> Create New
+    </button>
+  </div>
+
+  <div class="container form-group my-4">
+    <label for="courses-identifier">Select Preferred Courses Identifier <b class="text-success"></b></label>
+    <select id="courses-identifier" class="form-control" id="timetableName">
+      <option value="code" selected>Course Code </option>
+      <option value="title">Title</option>
+      <option value="instructor">Instructor</option>
+      <option value="venue">Venue</option>
+      <option value="location">Location</option>
+      <option value="building">Building</option>
+    </select>
+    <p><b>NOTE:</b> Downloading is Supported only when you select Course Code as your preferred courses identifier.</p>
+  </div>
 
 
   <div id="form-container" class="container overflow-auto">
@@ -80,7 +101,7 @@
             <label for="csv-file">Upload CSV file <b class="text-danger">*</b></label>
 
             <div class="input-group mb-3">
-              <input  type="file" class="form-control mb-1" id="csv-file">
+              <input type="file" class="form-control mb-1" id="csv-file">
 
             </div>
 
@@ -91,7 +112,7 @@
           </div>
           <div class="form-group my-4">
             <label for="courses-identifier">Courses Identifier <b class="text-success">*</b></label>
-            <select id="courses-identifier"  class="form-control" id="timetableName">
+            <select id="courses-identifier" class="form-control" id="timetableName">
               <option value="code" selected>Course Code </option>
               <option value="title">Title</option>
               <option value="instructor">Instructor</option>
@@ -112,7 +133,7 @@
 
     </div>
   </div>
-    <div style="background:transparent;height: 56px"></div>
+  <div style="background:transparent;height: 56px"></div>
   <footer class="page-footer fixed-bottom bg-light d-flex align-items-center justify-content-between flex-column py-1">
     <div class="container text-center text-muted">
       Copyright &copy; Gerison 2022. All rights reserved.
@@ -137,12 +158,12 @@
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarCollapse = document.querySelector('.navbar-collapse');
     const navOverlay = document.getElementById('nav-overlay')
-    
+
     function toggleNavbar() {
       navbarCollapse.classList.toggle('collapse');
       navOverlay.hidden = !navOverlay.hidden
     }
-    
+
     navbarToggler.addEventListener('click', toggleNavbar);
     navOverlay.addEventListener('click', toggleNavbar)
   </script>
