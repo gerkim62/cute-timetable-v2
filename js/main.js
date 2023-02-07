@@ -52,11 +52,13 @@ document.addEventListener("fullscreenchange", () => {
 document.getElementById('download').addEventListener('click', downloadTimetable)
 
 document.getElementById('discard').addEventListener('click', () => {
-  showUploadUI()
+  
   hideTimetableUI()
+  showUploadUI()
   
 })
 
 function downloadTimetable(){
   
 }
+
