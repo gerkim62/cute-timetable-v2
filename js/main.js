@@ -64,5 +64,3 @@ function downloadTimetable() {
   console.log('downloadTimetable')
 }
 
-showTimetableUI()
-hideUploadUI()

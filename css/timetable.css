@@ -247,11 +247,12 @@ th.day + td{
   margin-top: -11px;
 }
 
+/*
 .container:hover .custom-card {
   filter: blur(20px);
   transform: scale(0.9);
   opacity: 0.5;
-}
+}*/
 
 .custom-card:hover {
   filter: blur(0px);
