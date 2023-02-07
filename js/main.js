@@ -37,13 +37,17 @@ timetableDetails_form.addEventListener('submit', async (e) => {
     hideUploadUI()
 
 
-    timetable_table.addEventListener("mouseenter", function(e) {
-      console.log(e.target, 'mouseenter')
-    });
+    Array.from(timetable_table.querySelectorAll('td')).forEach(td=>{
+      td.addEventListener("mouseenter", function(e) {
+        console.log(e.target, 'mouseenter')
+      });
+    })
 
-    timetable_table.addEventListener("mouseleave", function(e) {
-      console.log(e.target, 'mouseleave')
-    });
+    Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
+      td.addEventListener("mouseleave", function(e) {
+        console.log(e.target, 'mouseleave')
+      });
+    })
 
   }
 
