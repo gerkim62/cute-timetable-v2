@@ -55,6 +55,8 @@ document.getElementById('discard').addEventListener('click', () => {
   hideTimetableUI()
   showUploadUI()
 
+timetableContainer_div.querySelector('table').remove();
+
 })
 
 function downloadTimetable() {
