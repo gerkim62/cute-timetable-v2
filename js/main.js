@@ -32,7 +32,7 @@ timetableDetails_form.addEventListener('submit', async (e) => {
     timetableContainer_div.removeAttribute('hidden')
 
     timetableContainer_div.append(timetable_table)
-    lockScreenToLandscape(timetableContainer_div.parentNode)
+    //  lockScreenToLandscape(timetableContainer_div.parentNode)
 
     showTimetableUI()
     hideUploadUI()
@@ -43,10 +43,16 @@ timetableDetails_form.addEventListener('submit', async (e) => {
 
 
 document.addEventListener("fullscreenchange", () => {
-      const isFullscreen = !!document.fullscreenElement;
+  const isFullscreen = !!document.fullscreenElement;
 
-      if (isFullscreen) timetableContainer_div.parentNode.classList.add('d-flex')
-      else timetableContainer_div.parentNode.classList.remove('d-flex')
-    })
-    
-    
+  if (isFullscreen) timetableContainer_div.parentNode.classList.add('d-flex')
+  else timetableContainer_div.parentNode.classList.remove('d-flex')
+})
+
+document.getElementById('download').addEventListener('click', downloadTimetable)
+
+document.getElementById('discard').addEventListener('click', () => {
+  showUploadUI()
+  hideTimetableUI()
+  
+})
