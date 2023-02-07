@@ -32,7 +32,6 @@ timetableDetails_form.addEventListener('submit', async (e) => {
     timetableContainer_div.removeAttribute('hidden')
 
     timetableContainer_div.append(timetable_table)
-    //  lockScreenToLandscape(timetableContainer_div.parentNode)
 
     showTimetableUI()
     hideUploadUI()
@@ -59,6 +58,7 @@ document.getElementById('discard').addEventListener('click', () => {
 })
 
 function downloadTimetable(){
-  
+        lockScreenToLandscape(timetableContainer_div.parentNode)
+
 }
 
