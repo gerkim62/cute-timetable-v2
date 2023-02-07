@@ -155,13 +155,13 @@ th.day + td{
   border-left: 1.5px solid white;
 }
 
-/*card
-.card {
+
+.custom-card {
   width: 200px;
   min-height: max-content;
   background: var(--color-secondary);
   margin:10px auto;
-  
+  margin-bottom: 10px;
   border-radius: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -180,12 +180,12 @@ th.day + td{
   opacity:1;
   animation-fill-mode: forwards;
   position: absolute !important;
-  top: 82.5%;
+  top: -30px;
   left: calc(50% + 30px) !important;
   transform: translateX(-50%);
 }
 
-.card ul li {
+.custom-card ul li {
   list-style: none;
   text-align: left;
   margin: 0;
@@ -200,16 +200,16 @@ th.day + td{
   border-bottom: 1px solid rgba(0,0,0,.075);
 }
 
-.card ul li:last-child{
+.custom-card ul li:last-child{
   border-bottom-color: rgba(0,0,0,0);
 }
 
-.card ul li:hover{
+.custom-card ul li:hover{
   border-bottom: 1px solid currentColor;
   background: rgba(0,0,0,.05);
 }
 
-.card ul li i{
+.custom-card ul li i{
   text-align: center;
   width: 1rem !important;
   object-fit: cover;
@@ -219,20 +219,21 @@ th.day + td{
   font-size: 1.15rem;
 }
 
-.card ul li p{
+.custom-card ul li p{
+  margin:0;
   margin-left: 5px;
   width: 100%;
   padding: 5px;
   
 }
 
-.card ul li p:hover{
-  /*background: rgba(0, 0, 0, 0.2);
+.custom-card ul li p:hover{
+  /*background: rgba(0, 0, 0, 0.2);*/
 }
 
 
 
-.card ul {
+.custom-card ul {
   padding: 10px;
   
   z-index: 100;
@@ -246,18 +247,18 @@ th.day + td{
   margin-top: -11px;
 }
 
-.container:hover .card {
+.container:hover .custom-card {
   filter: blur(20px);
   transform: scale(0.9);
   opacity: 0.5;
 }
 
-.card:hover {
+.custom-card:hover {
   filter: blur(0px);
   opacity: 1;
 }
 
-.card .circle {
+.custom-card .circle {
   margin-bottom: -18px;
   width: 100%;
   height: 100%;
@@ -267,7 +268,7 @@ th.day + td{
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
-.card .circle h2 {
+.custom-card .circle h2 {
   color: var(--color-secondary);
   font-size: 1rem;
   padding: 25px;
@@ -280,13 +281,13 @@ th.day + td{
   letter-spacing: .5px;
 }
 
-.card .content {
+.custom-card .content {
   padding: 0px;
   page-break-after: 20px;
   text-align: center;
 }
 
-.card .close{
+.custom-card .close{
   position: absolute;
   right: 3px;
   top:-5px;
@@ -297,7 +298,7 @@ th.day + td{
   outline: none;
 }
 
-.card-overlay{
+.custom-card-overlay{
   position: absolute;
   inset: 0;
   background: var(--color-primary);
@@ -306,4 +307,4 @@ th.day + td{
   width: 100vw;
   height: 100vh;
   top:0;
-}*/
+}

@@ -96,12 +96,12 @@ export function showTimetableUI() {
 export function hideUploadUI(){
   timetableDetailsUI_div.classList.add('hide')
   console.log('hideUploadUI')
-  alert('hideUploadUI')
+  //alert('hideUploadUI')
 }
 
 export function showUploadUI(){
   timetableDetailsUI_div.classList.remove('hide')
   console.log('showUploadUI', timetableDetailsUI_div)
   timetableDetailsUI_div.removeAttribute('hidden')
-  alert('showUploadU', timetableDetailsUI_div.classList)
+  //alert('showUploadU', timetableDetailsUI_div.classList)
 }

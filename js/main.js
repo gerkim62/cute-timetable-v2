@@ -55,7 +55,7 @@ document.getElementById('discard').addEventListener('click', () => {
   hideTimetableUI()
   showUploadUI()
 
-timetableContainer_div.querySelector('table').remove();
+  timetableContainer_div.querySelector('table').remove();
 
 })
 
@@ -63,3 +63,6 @@ function downloadTimetable() {
   lockScreenToLandscape(timetableContainer_div.parentNode)
   console.log('downloadTimetable')
 }
+
+showTimetableUI()
+hideUploadUI()
