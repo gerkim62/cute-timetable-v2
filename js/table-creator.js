@@ -71,6 +71,7 @@ import {formatTimestamps, formatTimestamp} from './utils.js'
       target_td.textContent = course[coursesIdentifier]
       //console.log(course[coursesIdentifier], course)
       target_td.setAttribute(`data-color`, course.color);
+      target_td.setAttribute('data-code',course.code)
       target_td.style.backgroundColor = `var(${course.color})`
     })
   })
