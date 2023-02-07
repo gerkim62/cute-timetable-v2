@@ -56,3 +56,7 @@ document.getElementById('discard').addEventListener('click', () => {
   hideTimetableUI()
   
 })
+
+function downloadTimetable(){
+  
+}
