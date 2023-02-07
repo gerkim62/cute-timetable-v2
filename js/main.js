@@ -51,14 +51,13 @@ document.addEventListener("fullscreenchange", () => {
 document.getElementById('download').addEventListener('click', downloadTimetable)
 
 document.getElementById('discard').addEventListener('click', () => {
-  
+
   hideTimetableUI()
   showUploadUI()
-  
+
 })
 
-function downloadTimetable(){
-        lockScreenToLandscape(timetableContainer_div.parentNode)
-
+function downloadTimetable() {
+  lockScreenToLandscape(timetableContainer_div.parentNode)
+  console.log('downloadTimetable')
 }
-
