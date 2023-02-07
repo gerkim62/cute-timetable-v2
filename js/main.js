@@ -1,6 +1,9 @@
 import { timetableDetails_form, csvUpload_input, timetableTitle_input, coursesIdentifier_select, timetableContainer_div } from './dom.js'
 import { getCSVStringFrom, cleanCSVString, getCourses, getDays, getTimestamps } from './csvParser.js'
 import createTimetable from './table-creator.js'
+import{lockScreenToLandscape, unlockScreenFromLandscape} from './ui.js'
+
+lockScreenToLandscape()
 
 /*Event listeners*/
 /**

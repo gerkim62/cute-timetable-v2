@@ -25,3 +25,50 @@ export function showCustomInstallPrompt(event) {
     });
   });
 }
+
+
+// function to lock screen orientation to landscape
+export function lockScreenToLandscape() {
+  enableFullscreen(document.body)
+  if (screen.orientation && screen.orientation.lock) {
+    screen.orientation.lock('landscape');
+  } else if (screen.lockOrientation) {
+    screen.lockOrientation('landscape');
+  } else if (screen.webkitLockOrientation) {
+    screen.webkitLockOrientation('landscape');
+  } else if (screen.mozLockOrientation) {
+    screen.mozLockOrientation('landscape');
+  } else if (screen.msLockOrientation) {
+    screen.msLockOrientation('landscape');
+  }
+}
+
+// function to unlock screen orientation
+export function unlockScreenFromLandscape() {
+  disableFullscreen()
+  if (screen.orientation && screen.orientation.unlock) {
+    screen.orientation.unlock();
+  } else if (screen.unlockOrientation) {
+    screen.unlockOrientation();
+  } else if (screen.webkitUnlockOrientation) {
+    screen.webkitUnlockOrientation();
+  } else if (screen.mozUnlockOrientation) {
+    screen.mozUnlockOrientation();
+  } else if (screen.msUnlockOrientation) {
+    screen.msUnlockOrientation();
+  }
+}
+
+// function to enable fullscreen
+function enableFullscreen(element) {
+  if (!document.fullscreenElement) {
+    element.requestFullscreen();
+  }
+}
+
+// function to disable fullscreen
+function disableFullscreen() {
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  }
+}
