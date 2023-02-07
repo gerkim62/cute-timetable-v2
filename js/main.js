@@ -36,6 +36,15 @@ timetableDetails_form.addEventListener('submit', async (e) => {
     showTimetableUI()
     hideUploadUI()
 
+
+    timetable_table.addEventListener("mouseenter", function(e) {
+      console.log(e.target, 'mouseenter')
+    });
+
+    timetable_table.addEventListener("mouseleave", function(e) {
+      console.log(e.target, 'mouseleave')
+    });
+
   }
 
 })
@@ -63,4 +72,3 @@ function downloadTimetable() {
   lockScreenToLandscape(timetableContainer_div.parentNode)
   console.log('downloadTimetable')
 }
-
