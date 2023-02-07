@@ -180,7 +180,7 @@ th.day + td{
   opacity:1;
   animation-fill-mode: forwards;
   position: absolute !important;
-  top: -30px;
+  top: -50px;
   left: calc(50% + 30px) !important;
   transform: translateX(-50%);
 }
