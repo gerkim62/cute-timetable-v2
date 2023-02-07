@@ -39,13 +39,13 @@ timetableDetails_form.addEventListener('submit', async (e) => {
 
     Array.from(timetable_table.querySelectorAll('td')).forEach(td=>{
       td.addEventListener("mouseenter", function(e) {
-        console.log(e.target, 'mouseenter')
+        console.log(e.target.getAttribute('data-code'), 'mouseenter')
       });
     })
 
     Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
       td.addEventListener("mouseleave", function(e) {
-        console.log(e.target, 'mouseleave')
+        console.log(e.target.getAttribute('data-code'), 'mouseleave')
       });
     })
 
