@@ -87,7 +87,7 @@ export function hideTimetableUI() {
 export function showTimetableUI() {
   Array.from(timetableUI_divs).forEach(div => {
 
-    div.setAttribute('hidden', '')
+    div.removeAttribute('hidden')
     
     div.classList.remove('hide')
   })
