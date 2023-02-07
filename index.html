@@ -28,13 +28,17 @@
       }
 
     }
-    
-    .timetable-ui{
-      
+
+    .timetable-ui {}
+
+    .hide {
+      display: none !important;
     }
-    
-    .hide{
-      display:none !important;
+
+    @media only screen and (max-device-width: 400px) and (orientation: landscape) {
+      .table-responsive {
+        background: #001d54;
+      }
     }
   </style>
 </head>
@@ -77,7 +81,7 @@
     <div style="background: #001d54" class="d-table mx-auto p-3" id="timetable-container"></div>
   </div>
 
-  <div  class="timetable-ui my-2 mt-3 container d-flex justify-content-between">
+  <div class="timetable-ui my-2 mt-3 container d-flex justify-content-between">
     <button id="download" class="btn btn-outline-primary">
       <i class="fas fa-download"></i> Download
     </button>
