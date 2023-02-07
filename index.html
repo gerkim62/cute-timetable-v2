@@ -28,6 +28,14 @@
       }
 
     }
+    
+    .timetable-ui{
+      
+    }
+    
+    .hide{
+      display:none !important;
+    }
   </style>
 </head>
 
@@ -65,11 +73,11 @@
   <div style="background:transparent;height: 56px"></div>
   <div hidden style="height: 100vh;width: 100vw; position: absolute; top:0;left:0; background:rgba(0,0,0,.5);z-index:3" id="nav-overlay"></div>
 
-  <div hidden-here class="d-flex align-items-center justify-content-center | container table-responsive">
+  <div hidden-here class="timetable-ui d-flex align-items-center justify-content-center | container table-responsive">
     <div style="background: #001d54" class="d-table mx-auto p-3" id="timetable-container"></div>
   </div>
 
-  <div class="my-2 container d-flex justify-content-between">
+  <div  class="timetable-ui my-2 container d-flex justify-content-between">
     <button class="btn btn-outline-primary">
       <i class="fas fa-download"></i> Download
     </button>
@@ -78,8 +86,8 @@
     </button>
   </div>
 
-  <div class="container form-group my-4">
-    <label for="courses-identifier">Select Preferred Courses Identifier <b class="text-success"></b></label>
+  <div class="timetable-ui container form-group my-4">
+    <label for="courses-identifier">Choose what appears in your Timetable<b class="text-success"></b></label>
     <select id="courses-identifier" class="form-control" id="timetableName">
       <option value="code" selected>Course Code </option>
       <option value="title">Title</option>
@@ -88,7 +96,7 @@
       <option value="location">Location</option>
       <option value="building">Building</option>
     </select>
-    <p><b>NOTE:</b> Downloading is Supported only when you select Course Code as your preferred courses identifier.</p>
+    <p><b>Note:</b> Course Code is Recommended</p>
   </div>
 
 
@@ -109,18 +117,6 @@
           <div class="form-group my-4">
             <label for="timetable-title">Enter the Timetable Title <b class="text-danger">*</b></label>
             <input id="timetable-title" placeholder="e.g Gerison's Timetable" type="text" class="form-control">
-          </div>
-          <div class="form-group my-4">
-            <label for="courses-identifier">Courses Identifier <b class="text-success">*</b></label>
-            <select id="courses-identifier" class="form-control" id="timetableName">
-              <option value="code" selected>Course Code </option>
-              <option value="title">Title</option>
-              <option value="instructor">Instructor</option>
-              <option value="venue">Venue</option>
-              <option value="location">Location</option>
-              <option value="building">Building</option>
-            </select>
-            <p><b></b></p>
           </div>
 
 

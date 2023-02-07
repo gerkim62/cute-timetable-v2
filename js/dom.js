@@ -5,3 +5,8 @@ export const coursesIdentifier_select = document.getElementById('courses-identif
 export const timetableDetailsUI_div = document.getElementById('form-container')
 
 export const timetableContainer_div = document.getElementById('timetable-container')
+
+export const timetableUI_divs = document.getElementsByClassName('timetable-ui')
+
+//console.log(timetableUI_divs)
+

@@ -1,3 +1,5 @@
+import { timetableUI_divs, timetableDetailsUI_div } from './dom.js'
+
 /**
  * showCustomInstallPrompt - shows a custom installation prompt to the user
  * @param {BeforeInstallPromptEvent} event - the beforeinstallprompt event that was fired
@@ -71,4 +73,30 @@ function disableFullscreen() {
   if (document.fullscreenElement) {
     document.exitFullscreen();
   }
+}
+
+
+export function hideTimetableUI() {
+  Array.from(timetableUI_divs).forEach(div => {
+
+    div.setAttribute('hidden', '')
+    div.classList.add('hide')
+  })
+}
+
+export function showTimetableUI() {
+  Array.from(timetableUI_divs).forEach(div => {
+
+    div.setAttribute('hidden', '')
+    
+    div.classList.remove('hide')
+  })
+}
+
+export function hideUploadUI(){
+  timetableDetailsUI_div.classList.add('hide')
+}
+
+export function showUploadUI(){
+  timetableDetailsUI_div.classList.remove('hide')
 }
