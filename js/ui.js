@@ -28,8 +28,8 @@ export function showCustomInstallPrompt(event) {
 
 
 // function to lock screen orientation to landscape
-export function lockScreenToLandscape() {
-  enableFullscreen(document.body)
+export function lockScreenToLandscape(element) {
+  enableFullscreen(element)
   if (screen.orientation && screen.orientation.lock) {
     screen.orientation.lock('landscape');
   } else if (screen.lockOrientation) {
