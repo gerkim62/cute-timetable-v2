@@ -65,7 +65,13 @@ export function formatTimestamps(timestamps){
 export async function convertElementToImage(element, options) {
   try {
     //alert('starting to call domtoimage')
-    const dataUrl = await domtoimage.toPng(element, options);
+    const imageOptions = {
+      width: timetable.offsetWidth * scale,
+      height: timetable.offsetHeight * scale,
+      quality: 1,
+      style: imageStyle
+    }
+    const dataUrl = await domtoimage.toPng(element, imageOptions);
     return dataUrl;
   } catch (error) {
     console.error(error);
