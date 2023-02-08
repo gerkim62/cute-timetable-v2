@@ -59,12 +59,20 @@ timetableDetails_form.addEventListener('submit', async (e) => {
       });
     })
 
-    Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
+Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
+  td.addEventListener("mouseleave", function(e) {
+    const code = e.target.getAttribute('data-code');
+    propertiesCard_div.addEventListener("mouseenter", function() {
+      td.removeEventListener("mouseleave", hide);
+    });
+    propertiesCard_div.addEventListener("mouseleave", function() {
       td.addEventListener("mouseleave", function(e) {
-        const code = e.target.getAttribute('data-code')
-        hide(propertiesCard_div)
+        hide(propertiesCard_div);
       });
-    })
+    });
+  });
+});
+
 
   }
 
