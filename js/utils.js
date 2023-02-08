@@ -79,6 +79,8 @@ export async function convertElementToImage(element, options) {
       quality: 1,
       style: imageStyle
     }
+    
+    console.log(imageOptions)
     const dataUrl = await domtoimage.toPng(element, imageOptions);
     return dataUrl;
   } catch (error) {
