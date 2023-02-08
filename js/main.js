@@ -16,7 +16,7 @@ const propertiesCard_div = document.getElementById('properties-custom-card')
 const closePropertiesCard_button = document.getElementById('close-properties')
 
 const timetable_obj = JSON.parse(localStorage.getItem('timetable_obj'))
-showTimetable(timetable_obj)
+if(timetable_obj)showTimetable(timetable_obj)
 
 hideTimetableUI()
 //document.onclick = lockScreenToLandscape
