@@ -65,9 +65,17 @@ export function formatTimestamps(timestamps){
 export async function convertElementToImage(element, options) {
   try {
     //alert('starting to call domtoimage')
+      const scale = 5
+      const imageStyle = {
+        transform: 'scale(' + scale + ')',
+        transformOrigin: 'top left',
+        width: timetable.offsetWidth + "px",
+        height: timetable.offsetHeight + "px"
+      }
+    
     const imageOptions = {
-      width: timetable.offsetWidth * scale,
-      height: timetable.offsetHeight * scale,
+      width: element.offsetWidth * scale,
+      height: element.offsetHeight * scale,
       quality: 1,
       style: imageStyle
     }
