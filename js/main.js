@@ -62,6 +62,7 @@ timetableDetails_form.addEventListener('submit', async (e) => {
     Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
       td.addEventListener("touchstart", function(e) {
         const code = e.target.getAttribute('data-code')
+        if (event.touches.length === 0) return 'canceled'
         if (!code) return hide(propertiesCard_div)
         showProperties(code, courses)
       });
