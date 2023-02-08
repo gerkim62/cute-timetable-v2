@@ -76,7 +76,7 @@ async function downloadTimetable() {
   lockScreenToLandscape(timetableContainer_div.parentNode)
   console.log('downloadTimetable')
   
-  const img = await convertElementToImage(timetableContainer_div)
+  const img = await convertElementToImage(timetableContainer_div.parentNode)
   console.log(timetableContainer_div)
   downloadImage(img,`timetable-${new Date().toISOString()}.png`)
   
