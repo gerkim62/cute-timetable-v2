@@ -39,35 +39,12 @@ timetableDetails_form.addEventListener('submit', async (e) => {
   const cleanedCSVString = cleanCSVString(rawCsvString)
 
   const courses = getCourses(cleanedCSVString)
-  const timetable_table = createTimetable(courses, timetableTitle, coursesIdentifier)
-  //console.log(timetable_table)
-  if (timetable_table) {
-    timetableDetailsUI_div.setAttribute('hidden', '')
-    timetableContainer_div.removeAttribute('hidden')
 
-    timetableContainer_div.append(timetable_table)
+  const timetable_obj = { title: timetableTitle, courses }
 
-    showTimetableUI()
-    hideUploadUI()
+  localStorage.setItem('timetable_obj', JSON.stringify(timetable_obj));
 
-
-    Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
-      td.addEventListener("mouseenter", function(e) {
-        const code = e.target.getAttribute('data-code')
-        if (!code) return hide(propertiesCard_div)
-        showProperties(code, courses)
-      });
-    })
-
-
-    Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
-      td.addEventListener("mouseleave", function(e) {
-        const code = e.target.getAttribute('data-code')
-        hide(propertiesCard_div)
-      });
-    })
-
-  }
+  showTimetable(timetable_obj)
 
 })
 
@@ -119,4 +96,40 @@ function hide(element) {
 function show(element) {
   element.removeAttribute('hidden')
   element.classList.remove('hide')
+}
+
+
+
+
+function showTimetable({courses, title}) {
+  const coursesIdentifier = 'code'
+  const timetable_table = createTimetable(courses, title, coursesIdentifier)
+  //console.log(timetable_table)
+  if (timetable_table) {
+    timetableDetailsUI_div.setAttribute('hidden', '')
+    timetableContainer_div.removeAttribute('hidden')
+
+    timetableContainer_div.append(timetable_table)
+
+    showTimetableUI()
+    hideUploadUI()
+
+
+    Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
+      td.addEventListener("mouseenter", function(e) {
+        const code = e.target.getAttribute('data-code')
+        if (!code) return hide(propertiesCard_div)
+        showProperties(code, courses)
+      });
+    })
+
+
+    Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
+      td.addEventListener("mouseleave", function(e) {
+        const code = e.target.getAttribute('data-code')
+        hide(propertiesCard_div)
+      });
+    })
+
+  }
 }
