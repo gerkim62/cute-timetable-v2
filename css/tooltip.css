@@ -47,8 +47,8 @@
 }
 
 /* Make the tooltips respond to hover */
-[tooltip]:hover::before,
-[tooltip]:hover::after {
+[tooltip]::before,
+[tooltip]::after {
   display: block;
 }
 
@@ -149,20 +149,20 @@
 }
 
 /* FX All The Things */ 
-[tooltip]:not([flow]):hover::before,
-[tooltip]:not([flow]):hover::after,
-[tooltip][flow^="up"]:hover::before,
-[tooltip][flow^="up"]:hover::after,
-[tooltip][flow^="down"]:hover::before,
-[tooltip][flow^="down"]:hover::after {
+[tooltip]:not([flow])::before,
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::before,
+[tooltip][flow^="up"]::after,
+[tooltip][flow^="down"]::before,
+[tooltip][flow^="down"]::after {
   -webkit-animation: tooltips-vert 300ms ease-out forwards;
           animation: tooltips-vert 300ms ease-out forwards;
 }
 
-[tooltip][flow^="left"]:hover::before,
-[tooltip][flow^="left"]:hover::after,
-[tooltip][flow^="right"]:hover::before,
-[tooltip][flow^="right"]:hover::after {
+[tooltip][flow^="left"]::before,
+[tooltip][flow^="left"]::after,
+[tooltip][flow^="right"]::before,
+[tooltip][flow^="right"]::after {
   -webkit-animation: tooltips-horz 300ms ease-out forwards;
           animation: tooltips-horz 300ms ease-out forwards;
 }
