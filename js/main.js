@@ -80,6 +80,8 @@ async function downloadTimetable() {
   console.log(timetableContainer_div)
   downloadImage(img,`timetable-${new Date().toUTCString()}.png`)
   
+  
+  
 }
 
 function showProperties(courseCode, courses) {
