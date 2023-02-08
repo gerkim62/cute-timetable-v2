@@ -181,7 +181,7 @@ th.day + td{
   animation-fill-mode: forwards;
   position: absolute !important;
   top: -50px;
-  left: calc(50% + 30px) !important;
+  left: calc(50% + 10px) !important;
   transform: translateX(-50%);
 }
 
