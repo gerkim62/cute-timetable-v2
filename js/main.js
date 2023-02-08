@@ -2,7 +2,7 @@ import { timetableDetails_form, csvUpload_input, timetableTitle_input, coursesId
 import { getCSVStringFrom, cleanCSVString, getCourses, getDays, getTimestamps } from './csvParser.js'
 import createTimetable from './table-creator.js'
 import { lockScreenToLandscape, unlockScreenFromLandscape, showUploadUI, hideUploadUI, showTimetableUI, hideTimetableUI } from './ui.js'
-import {convertElementToImage, downloadImage} from './utils.js'
+import { convertElementToImage, downloadImage } from './utils.js'
 
 //todo:move this to their file 
 const courseCode_p = document.getElementById('code')
@@ -19,7 +19,7 @@ hideTimetableUI()
 hide(propertiesCard_div)
 const timetable_obj = JSON.parse(localStorage.getItem('timetable_obj'))
 console.log((timetable_obj))
-if(timetable_obj)showTimetable(timetable_obj)
+if (timetable_obj) showTimetable(timetable_obj)
 
 
 //document.onclick = lockScreenToLandscape
@@ -75,13 +75,13 @@ async function downloadTimetable() {
   console.log('started...')
   lockScreenToLandscape(timetableContainer_div.parentNode)
   console.log('downloadTimetable')
-  
+
   const img = await convertElementToImage(timetableContainer_div)
   console.log(timetableContainer_div)
-  downloadImage(img,`timetable-${new Date().toUTCString()}.png`)
-  
-  
-  
+  downloadImage(img, `timetable-${new Date().toUTCString()}.png`)
+
+
+
 }
 
 function showProperties(courseCode, courses) {
@@ -113,7 +113,7 @@ function show(element) {
 
 
 
-function showTimetable({courses, title}) {
+function showTimetable({ courses, title }) {
   const coursesIdentifier = 'code'
   const timetable_table = createTimetable(courses, title, coursesIdentifier)
   console.log(timetable_table)
@@ -138,10 +138,23 @@ function showTimetable({courses, title}) {
 
     Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
       td.addEventListener("mouseleave", function(e) {
-        const code = e.target.getAttribute('data-code')
-        hide(propertiesCard_div)
+        if (!enteredPropertiesCard) {
+          //const code = e.target.getAttribute('data-code');
+          hide(propertiesCard_div);
+        }
       });
+
     })
 
   }
 }
+
+let enteredPropertiesCard = false;
+
+propertiesCard_div.addEventListener("mouseenter", function() {
+  enteredPropertiesCard = true;
+});
+
+propertiesCard_div.addEventListener("mouseleave", function() {
+  enteredPropertiesCard = false;
+});
