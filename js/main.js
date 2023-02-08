@@ -2,6 +2,7 @@ import { timetableDetails_form, csvUpload_input, timetableTitle_input, coursesId
 import { getCSVStringFrom, cleanCSVString, getCourses, getDays, getTimestamps } from './csvParser.js'
 import createTimetable from './table-creator.js'
 import { lockScreenToLandscape, unlockScreenFromLandscape, showUploadUI, hideUploadUI, showTimetableUI, hideTimetableUI } from './ui.js'
+import {convertElementToImage, downloadImage} from './utils.js'
 
 //todo:move this to their file 
 const courseCode_p = document.getElementById('code')
@@ -70,9 +71,15 @@ document.getElementById('discard').addEventListener('click', () => {
 
 })
 
-function downloadTimetable() {
+async function downloadTimetable() {
+  console.log('started...')
   lockScreenToLandscape(timetableContainer_div.parentNode)
   console.log('downloadTimetable')
+  
+  const img = await convertElementToImage(timetableContainer_div)
+  
+  downloadImage(img,`timetable-${new Date().toISOString()}.png`)
+  
 }
 
 function showProperties(courseCode, courses) {

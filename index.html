@@ -12,9 +12,12 @@
 
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/timetable.css">
-<link rel="stylesheet" href="css/tooltip.css">
+  <link rel="stylesheet" href="css/tooltip.css">
 
   <script defer src="https://kit.fontawesome.com/ec6d630e9e.js" crossorigin="anonymous"></script>
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/dist/dom-to-image.min.js"></script>
+
   <script type="module" src="js/main.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
@@ -102,44 +105,44 @@
 
 
   <div style="position: relative" hidden class="hide timetable-ui my-2 mt-3 container d-flex justify-content-between">
-    
-      <div id="properties-custom-card" class="custom-card hidden">
+
+    <div id="properties-custom-card" class="custom-card hidden">
 
 
 
-    <button id="close-properties" class="close">
-      ×
-    </button>
+      <button id="close-properties" class="close">
+        ×
+      </button>
 
-    <div class="circle">
-      <h2 id="code">COURSECODE</h2>
+      <div class="circle">
+        <h2 id="code">COURSECODE</h2>
+      </div>
+      <div class="content">
+        <ul>
+          <li tooltip="Title" flow="right"><i class="fa fa-book"> </i>
+            <p id="title">Course Title</p>
+          </li>
+          <li tooltip="Instructor" flow="left"><i class="fa fa-user-tie"></i>
+            <p id="instructor">Instructor</p>
+          </li>
+          <li tooltip="Building" flow="right"><i class="fa  fa-building"></i>
+            <p id="building">Building</p>
+          </li>
+          <li tooltip="Location" flow="left"><i class="fa  fa-map-marker"></i>
+            <p id="location">Location</p>
+          </li>
+          <li tooltip="Venue" flow="right"><i class="fa  fa-university"></i>
+            <p id="venue">Venue</p>
+          </li>
+          <li tooltip="Option" flow="left"><i class="fa  fa-users"></i>
+            <p id="group">Option</p>
+          </li>
+        </ul>
+
+      </div>
     </div>
-    <div class="content">
-      <ul>
-        <li tooltip="Title" flow="right"><i class="fa fa-book"> </i>
-          <p id="title">Course Title</p>
-        </li>
-        <li tooltip="Instructor" flow="left"><i class="fa fa-user-tie"></i>
-          <p id="instructor">Instructor</p>
-        </li>
-        <li tooltip="Building" flow="right"><i class="fa  fa-building"></i>
-          <p id="building">Building</p>
-        </li>
-        <li tooltip="Location" flow="left"><i class="fa  fa-map-marker"></i>
-          <p id="location">Location</p>
-        </li>
-        <li tooltip="Venue" flow="right"><i class="fa  fa-university"></i>
-          <p id="venue">Venue</p>
-        </li>
-        <li tooltip="Option" flow="left"><i class="fa  fa-users"></i>
-          <p id="group">Option</p>
-        </li>
-      </ul>
 
-    </div>
-  </div>
 
-    
     <button id="download" class="btn btn-outline-primary">
       <i class="fas fa-download"></i> Download
     </button>
@@ -184,8 +187,10 @@
 
           <button type="submit" class="btn btn-success ">Generate Timetable</button>
         </form>
-        <p class="my-2 mb-5">
-          <br><b>READ CAREFULLY:</b> Please do not upload the timetable as a PDF or any other format apart from <a class="text-dark" href="pages/how-to-download-csv.html"><u><i>CSV format</i></u></a>, because it will not work. <br><br><u><b><a href="pages/how-to-download-csv.html" class="">See how to download CSV step-by-step</a></b></u> <i class="fas fa-external-link-alt"></i>
+        <p class="my-2">
+
+          <br><b>READ CAREFULLY:</b> Please do not upload the timetable as a PDF or any other format apart from <a class="text-dark" href="pages/how-to-download-csv.html"><u><i>CSV format</i></u></a>, because it will not work.
+        <p class="mt-4">To download your timetable as a CSV file, click the "Export" button at the top of your timetable in the UEAB registration website</p> <br><br><u><b><a href="pages/how-to-download-csv.html" class="">See how to download CSV step-by-step</a></b></u> <i class="fas fa-external-link-alt"></i>
         </p>
       </div>
 

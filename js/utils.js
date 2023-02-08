@@ -60,3 +60,34 @@ export const formatTimestamp = timestamp => {
 export function formatTimestamps(timestamps){
   return timestamps.map(timestamp => formatTimestamp(timestamp))
 }
+
+
+export async function convertElementToImage(element, options) {
+  try {
+    //alert('starting to call domtoimage')
+    const dataUrl = await domtoimage.toPng(element, options);
+    return dataUrl;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export function downloadImage(dataUrl, name) {
+  // Sanitize the file name
+  const fileName = sanitizeName(name);
+
+  // Create a link element
+  const link = document.createElement('a');
+  link.href = dataUrl;
+  link.download = fileName;
+
+  // Append the link to the DOM
+  document.body.appendChild(link);
+
+  // Click the link to download the image
+  link.click();
+
+  // Remove the link from the DOM
+  document.body.removeChild(link);
+}
+
