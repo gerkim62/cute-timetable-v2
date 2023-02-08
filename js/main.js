@@ -3,6 +3,20 @@ import { getCSVStringFrom, cleanCSVString, getCourses, getDays, getTimestamps } 
 import createTimetable from './table-creator.js'
 import { lockScreenToLandscape, unlockScreenFromLandscape, showUploadUI, hideUploadUI, showTimetableUI, hideTimetableUI } from './ui.js'
 
+//todo:move this to their file 
+const courseCode_p = document.getElementById('code')
+const courseTitle_p = document.getElementById('title')
+const courseVenue_p = document.getElementById('venue')
+const courseLocation_p = document.getElementById('location')
+const courseGroup_p = document.getElementById('group')
+const courseBuilding_p = document.getElementById('building')
+const courseInstructor_p = document.getElementById('instructor')
+
+const propertiesCard_div = document.getElementById('properties-card')
+const closePropertiesCard_button = document.getElementById('close-properties')
+
+
+
 hideTimetableUI()
 //document.onclick = lockScreenToLandscape
 
@@ -39,7 +53,9 @@ timetableDetails_form.addEventListener('submit', async (e) => {
 
     Array.from(timetable_table.querySelectorAll('td')).forEach(td=>{
       td.addEventListener("mouseenter", function(e) {
-        console.log(e.target.getAttribute('data-code'), 'mouseenter')
+        const code = e.target.getAttribute('data-code')
+
+      showProperties(code,courses)
       });
     })
 
@@ -75,4 +91,20 @@ document.getElementById('discard').addEventListener('click', () => {
 function downloadTimetable() {
   lockScreenToLandscape(timetableContainer_div.parentNode)
   console.log('downloadTimetable')
+}
+
+function showProperties(courseCode, courses){
+  courses.forEach(course => {
+    if (course.code === courseCode) {
+      courseCode_p.innerHTML = course.code
+      courseGroup_p.innerHTML = course.option
+      courseTitle_p.innerHTML = course.title
+      courseVenue_p.innerHTML = course.venue
+      courseBuilding_p.innerHTML = course.building
+      courseLocation_p.innerHTML = course.location
+      courseInstructor_p.innerHTML = course.instructor
+  
+      //propertiesCard_div.style.
+    }
+  });
 }
