@@ -106,7 +106,7 @@ function show(element) {
 function showTimetable({courses, title}) {
   const coursesIdentifier = 'code'
   const timetable_table = createTimetable(courses, title, coursesIdentifier)
-  //console.log(timetable_table)
+  console.log(timetable_table)
   if (timetable_table) {
     timetableDetailsUI_div.setAttribute('hidden', '')
     timetableContainer_div.removeAttribute('hidden')
