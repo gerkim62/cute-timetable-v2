@@ -54,14 +54,15 @@ timetableDetails_form.addEventListener('submit', async (e) => {
     Array.from(timetable_table.querySelectorAll('td')).forEach(td=>{
       td.addEventListener("mouseenter", function(e) {
         const code = e.target.getAttribute('data-code')
-
+        if(!code) return hide(propertiesCard_div)
       showProperties(code,courses)
       });
     })
 
     Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
       td.addEventListener("mouseleave", function(e) {
-        console.log(e.target.getAttribute('data-code'), 'mouseleave')
+        const code = e.target.getAttribute('data-code')
+        hide(propertiesCard_div)
       });
     })
 
@@ -104,7 +105,17 @@ function showProperties(courseCode, courses){
       courseLocation_p.innerHTML = course.location
       courseInstructor_p.innerHTML = course.instructor
   
-      //propertiesCard_div.style.
+      show(propertiesCard_div)
     }
   });
+}
+
+function hide(element){
+  element.setAttribute('hidden','')
+  element.classList.add('hide')
+}
+
+function show(element){
+  element.removeAttribute('hidden')
+  element.classList.remove('hide')
 }
