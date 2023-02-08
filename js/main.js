@@ -51,28 +51,20 @@ timetableDetails_form.addEventListener('submit', async (e) => {
     hideUploadUI()
 
 
-    Array.from(timetable_table.querySelectorAll('td')).forEach(td=>{
+    Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
       td.addEventListener("mouseenter", function(e) {
         const code = e.target.getAttribute('data-code')
-        if(!code) return hide(propertiesCard_div)
-      showProperties(code,courses)
+        if (!code) return hide(propertiesCard_div)
+        showProperties(code, courses)
       });
     })
 
-Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
-  td.addEventListener("mouseleave", function(e) {
-    const code = e.target.getAttribute('data-code');
-    propertiesCard_div.addEventListener("mouseenter", function() {
-      td.removeEventListener("mouseleave", hide);
-    });
-    propertiesCard_div.addEventListener("mouseleave", function() {
+    Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
       td.addEventListener("mouseleave", function(e) {
-        hide(propertiesCard_div);
+        const code = e.target.getAttribute('data-code')
+        hide(propertiesCard_div)
       });
-    });
-  });
-});
-
+    })
 
   }
 
@@ -102,7 +94,7 @@ function downloadTimetable() {
   console.log('downloadTimetable')
 }
 
-function showProperties(courseCode, courses){
+function showProperties(courseCode, courses) {
   courses.forEach(course => {
     if (course.code === courseCode) {
       courseCode_p.innerHTML = course.code
@@ -112,18 +104,18 @@ function showProperties(courseCode, courses){
       courseBuilding_p.innerHTML = course.building
       courseLocation_p.innerHTML = course.location
       courseInstructor_p.innerHTML = course.instructor
-  
+
       show(propertiesCard_div)
     }
   });
 }
 
-function hide(element){
-  element.setAttribute('hidden','')
+function hide(element) {
+  element.setAttribute('hidden', '')
   element.classList.add('hide')
 }
 
-function show(element){
+function show(element) {
   element.removeAttribute('hidden')
   element.classList.remove('hide')
 }
