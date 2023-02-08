@@ -77,7 +77,7 @@ async function downloadTimetable() {
   console.log('downloadTimetable')
   
   const img = await convertElementToImage(timetableContainer_div)
-  
+  console.log(timetableContainer_div)
   downloadImage(img,`timetable-${new Date().toISOString()}.png`)
   
 }
