@@ -73,10 +73,10 @@ document.getElementById('discard').addEventListener('click', () => {
 
 async function downloadTimetable() {
   console.log('started...')
-  lockScreenToLandscape(timetableContainer_div.parentNode)
+  setTimeout(lockScreenToLandscape(timetableContainer_div.parentNode),0)
   console.log('downloadTimetable')
   
-  const img = await convertElementToImage(document.body)
+  const img = await convertElementToImage(timetableContainer_di)
   console.log(timetableContainer_div)
   downloadImage(img,`timetable-${new Date().toUTCString()}.png`)
   
