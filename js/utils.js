@@ -69,8 +69,8 @@ export async function convertElementToImage(element, options) {
       const imageStyle = {
         transform: 'scale(' + scale + ')',
         transformOrigin: 'top left',
-        width: timetable.offsetWidth + "px",
-        height: timetable.offsetHeight + "px"
+        width: element.offsetWidth + "px",
+        height: element.offsetHeight + "px"
       }
     
     const imageOptions = {
