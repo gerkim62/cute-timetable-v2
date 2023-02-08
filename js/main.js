@@ -73,7 +73,7 @@ document.getElementById('discard').addEventListener('click', () => {
 
 async function downloadTimetable() {
   console.log('started...')
-  setTimeout(lockScreenToLandscape(timetableContainer_div.parentNode),0)
+  setTimeout(lockScreenToLandscape(timetableContainer_div.parentNode),5000)
   console.log('downloadTimetable')
   
   const img = await convertElementToImage(timetableContainer_div)
