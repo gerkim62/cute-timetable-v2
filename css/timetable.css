@@ -176,7 +176,7 @@ th.day + td{
   background: var(--color-secondary);
   position: relative;
   
-  z-index: 201;
+  z-index: 2010;
   opacity:1;
   animation-fill-mode: forwards;
   position: absolute !important;
