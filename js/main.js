@@ -12,7 +12,7 @@ const courseGroup_p = document.getElementById('group')
 const courseBuilding_p = document.getElementById('building')
 const courseInstructor_p = document.getElementById('instructor')
 
-const propertiesCard_div = document.getElementById('properties-card')
+const propertiesCard_div = document.getElementById('properties-custom-card')
 const closePropertiesCard_button = document.getElementById('close-properties')
 
 
