@@ -129,6 +129,7 @@ function showTimetable({ courses, title }) {
 
     Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
       td.addEventListener("mouseenter", function(e) {
+        console.log(e.target)
         const code = e.target.getAttribute('data-code')
         if (!code) return hide(propertiesCard_div)
         showProperties(code, courses)
