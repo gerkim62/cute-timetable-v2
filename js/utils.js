@@ -69,8 +69,8 @@ export async function convertElementToImage(element, options) {
       const imageStyle = {
         transform: 'scale(' + scale + ')',
         transformOrigin: 'top left',
-        width: element.offsetWidth + "px",
-        height: element.offsetHeight + "px"
+        width: element.offsetWidth +50+ "px",
+        height: element.offsetHeight +50+ "px"
       }
     
     const imageOptions = {
