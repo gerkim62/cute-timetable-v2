@@ -193,3 +193,5 @@ coursesIdentifier_select.addEventListener('change', (e) => {
     localStorage.setItem('prefersFullscreen',false)
   }
 })*/
+
+hide(document.getElementById('spinner'))
