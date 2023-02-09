@@ -37,6 +37,7 @@ This function is triggered when the timetableDetails_form is submitted. It gets 
 */
 timetableDetails_form.addEventListener('submit', async (e) => {
   e.preventDefault()
+  show(document.getElementById('spinner'));
 
   const csvFile = csvUpload_input.files[0]
   const timetableTitle = timetableTitle_input.value || 'My Timetable'
@@ -52,7 +53,7 @@ timetableDetails_form.addEventListener('submit', async (e) => {
   localStorage.setItem('timetable_obj', JSON.stringify(timetable_obj));
 
   showTimetable(timetable_obj)
-
+hide(document.getElementById('spinner'));
 })
 
 
@@ -179,9 +180,11 @@ addEventListener('click', (e) => {
 
 
 coursesIdentifier_select.addEventListener('change', (e) => {
+  show(document.getElementById('spinner'));
   const preferredCoursesIdentifier = e.target.options[e.target.selectedIndex].value;
 
   timetable_obj && updatePreferredCoursesIdentifier({ identifier: preferredCoursesIdentifier, courses: timetable_obj.courses, timetableContainer: timetableContainer_div })
+  hide(document.getElementById('spinner'));
 })
 
 /*document.getElementById('auto-fullscreen').addEventListener('change',e=>{
@@ -194,4 +197,4 @@ coursesIdentifier_select.addEventListener('change', (e) => {
   }
 })*/
 
-//setTimeout(()=>{hide(document.getElementById('spinner'))},3500)
+hide(document.getElementById('spinner'));
