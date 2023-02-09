@@ -154,7 +154,7 @@ function showTimetable({ courses, title }) {
 addEventListener('click',(e)=>{
   const target = e.target
   console.log(target)
-  if(target.classList.contains('scheduled')||target==propertiesCard_div||propertiesCard_div.contains(target)) return
+  if(target.classList.contains('scheduled')||target==propertiesCard_div||propertiesCard_div.contains(target)) return false
   
   hide(propertiesCard_div)
 })
