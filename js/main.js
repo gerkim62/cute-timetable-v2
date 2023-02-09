@@ -18,7 +18,9 @@ const closePropertiesCard_button = document.getElementById('close-properties')
 hideTimetableUI()
 hide(propertiesCard_div)
 const timetable_obj = JSON.parse(localStorage.getItem('timetable_obj'))
-console.log((timetable_obj))
+const prefersFullscreen = JSON.parse(localStorage.getItem('prefersFullscreen'))==='true'
+console.log(prefersFullscreen)
+//console.log((timetable_obj))
 if (timetable_obj) showTimetable(timetable_obj)
 
 
@@ -179,4 +181,12 @@ coursesIdentifier_select.addEventListener('change', (e) => {
   const preferredCoursesIdentifier = e.target.options[e.target.selectedIndex].value;
 
   timetable_obj && updatePreferredCoursesIdentifier({ identifier: preferredCoursesIdentifier, courses: timetable_obj.courses, timetableContainer: timetableContainer_div })
+})
+
+document.getElementById('auto-fullscreen').addEventListener('change',()=>{
+  if(e.target.selected){
+    localStorage.setItem('prefersFullscreen',true)
+  }else{
+    localStorage.setItem('prefersFullscreen',false)
+  }
 })
