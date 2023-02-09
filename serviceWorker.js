@@ -23,7 +23,7 @@ const assetsToCache = [
 
   "/js/main.js",
   "/js/nav.js",
-  "/js/functions.js",
+  //"/js/functions.js",
   "/js/dom.js"
 
 ];
