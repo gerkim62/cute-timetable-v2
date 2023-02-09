@@ -194,4 +194,4 @@ coursesIdentifier_select.addEventListener('change', (e) => {
   }
 })*/
 
-setTimeout(()=>{hide(document.getElementById('spinner'))},3500)
+//setTimeout(()=>{hide(document.getElementById('spinner'))},3500)
