@@ -163,7 +163,7 @@ addEventListener('click', (e) => {
 
 
 coursesIdentifier_select.addEventListener('change', (e) => {
-  const preferredCoursesIdentifier = e.target.options[selectList.selectedIndex].value;
+  const preferredCoursesIdentifier = e.target.options[e.target.selectedIndex].value;
 
   timetable_obj && updatePreferredCoursesIdentifier({ identifier: preferredCoursesIdentifier, courses: timetable_obj.courses, timetableContainer: timetableContainer_div })
 })
