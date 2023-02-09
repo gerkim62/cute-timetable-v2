@@ -104,6 +104,6 @@ export function downloadImage(dataUrl, name) {
   link.click();
 
   // Remove the link from the DOM
-  document.body.remove(link);
+  document.body.removeChild(link);
 }
 
