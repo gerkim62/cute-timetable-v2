@@ -153,5 +153,5 @@ function showTimetable({ courses, title }) {
 
 addEventListener('click',(e)=>{
   const target = e.target
-  if(target === timetableContainer_div)alert('container')
+  if(timetableContainer_div.contains(target)||target==propertiesCard_div)alert('container')
 })
