@@ -8,9 +8,9 @@ import { timetableUI_divs, timetableDetailsUI_div } from './dom.js'
  * The userChoice promise is used to check the outcome of the prompt and log the result. It also add the hidden class to the custom install UI.
  */
 export function showCustomInstallPrompt(event) {
-  customInstallUI.classList.remove('hidden');
+  customInstallUI.classList.remove('hide');
   notNowButton.addEventListener('click', () => {
-    customInstallUI.classList.add('hidden');
+    customInstallUI.classList.add('hide');
     console.log('clicked not now')
   })
   customInstallButton.addEventListener('click', () => {

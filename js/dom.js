@@ -10,3 +10,6 @@ export const timetableUI_divs = document.getElementsByClassName('timetable-ui')
 
 //console.log(timetableUI_divs)
 
+const customInstallUI = document.getElementById('custom-install-ui');
+const customInstallButton = document.getElementById('install');
+const notNowButton = document.getElementById('not-now')
