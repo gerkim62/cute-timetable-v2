@@ -68,7 +68,7 @@ document.addEventListener("fullscreenchange", () => {
 
 document.getElementById('fullscreen').addEventListener('click', fullscreenTimetable)
 
-document.getElementById('download').addEventListener('click', downloadTimetable)
+//document.getElementById('download').addEventListener('click', downloadTimetable)
 
 
 document.getElementById('discard').addEventListener('click', () => {
