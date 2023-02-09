@@ -137,7 +137,7 @@ function showTimetable({ courses, title }) {
     })
 
 
-   /* Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
+    /* Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
       td.addEventListener("mouseleave", function(e) {
         if (enteredPropertiesCard) {
           //const code = e.target.getAttribute('data-code');
@@ -151,17 +151,19 @@ function showTimetable({ courses, title }) {
   }
 }
 
-addEventListener('click',(e)=>{
+addEventListener('click', (e) => {
   const target = e.target
   console.log(target)
-  if(target==closePropertiesCard_button) return hide(propertiesCard_div)
-  if(target.classList.contains('scheduled')||target==propertiesCard_div||propertiesCard_div.contains(target)) return false
-  
+  if (target == closePropertiesCard_button) return hide(propertiesCard_div)
+  if (target.classList.contains('scheduled') || target == propertiesCard_div || propertiesCard_div.contains(target)) return false
+
   hide(propertiesCard_div)
 })
 
-updatePreferredCoursesIdentifier({identifier:'venue',courses:timetable_obj.courses,timetableContainer:timetableContainer_div})
 
-coursesIdentifier_select.addEventListener('change',(e)=>{
-  console.log(e.target.querySelectorAll('option'))
+
+coursesIdentifier_select.addEventListener('change', (e) => {
+  const preferredCoursesIdentifier = e.target.options[selectList.selectedIndex].value;
+
+  timetable_obj && updatePreferredCoursesIdentifier({ identifier: preferredCoursesIdentifier, courses: timetable_obj.courses, timetableContainer: timetableContainer_div })
 })
