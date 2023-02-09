@@ -105,3 +105,11 @@ export function showUploadUI(){
   timetableDetailsUI_div.removeAttribute('hidden')
   //alert('showUploadU', timetableDetailsUI_div.classList)
 }
+
+export function updatePreferredCoursesIdentifier({identifier, courses, timetableContainer}){
+  if(!courses) return console.log('no courses exist')
+  Array.from(timetableContainer.querySelectorAll('td.scheduled')).forEach(td=>{
+    const code = td.getAttribute('code')
+    console.log(code)
+  })
+}

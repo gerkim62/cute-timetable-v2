@@ -1,7 +1,7 @@
 import { timetableDetails_form, csvUpload_input, timetableTitle_input, coursesIdentifier_select, timetableContainer_div, timetableDetailsUI_div } from './dom.js'
 import { getCSVStringFrom, cleanCSVString, getCourses, getDays, getTimestamps } from './csvParser.js'
 import createTimetable from './table-creator.js'
-import { lockScreenToLandscape, unlockScreenFromLandscape, showUploadUI, hideUploadUI, showTimetableUI, hideTimetableUI } from './ui.js'
+import { lockScreenToLandscape, unlockScreenFromLandscape, showUploadUI, hideUploadUI, showTimetableUI, hideTimetableUI, updatePreferredCoursesIdentifier } from './ui.js'
 import { convertElementToImage, downloadImage } from './utils.js'
 
 //todo:move this to their file 
@@ -159,3 +159,5 @@ addEventListener('click',(e)=>{
   
   hide(propertiesCard_div)
 })
+
+updatePreferredCoursesIdentifier({identifier:'code',courses:timetable_obj.courses,timetableContainer:timetableContainer_div})
