@@ -137,7 +137,7 @@ function showTimetable({ courses, title }) {
     })
 
 
-    Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
+   /* Array.from(timetable_table.querySelectorAll('td')).forEach(td => {
       td.addEventListener("mouseleave", function(e) {
         if (enteredPropertiesCard) {
           //const code = e.target.getAttribute('data-code');
@@ -147,7 +147,7 @@ function showTimetable({ courses, title }) {
       });
 
     })
-
+*/
   }
 }
 
