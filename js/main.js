@@ -184,9 +184,11 @@ coursesIdentifier_select.addEventListener('change', (e) => {
 })
 
 document.getElementById('auto-fullscreen').addEventListener('change',e=>{
-  if(e.target.selected){
+  if(e.target.checked){
+    console.log('selected')
     localStorage.setItem('prefersFullscreen',true)
   }else{
+    console.log('unchecked')
     localStorage.setItem('prefersFullscreen',false)
   }
 })
