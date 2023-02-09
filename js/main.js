@@ -151,12 +151,6 @@ function showTimetable({ courses, title }) {
   }
 }
 
-let enteredPropertiesCard = false;
-
-propertiesCard_div.addEventListener("mouseenter", function() {
-  enteredPropertiesCard = true;
-});
-
-propertiesCard_div.addEventListener("mouseleave", function() {
-  enteredPropertiesCard = false;
-});
+addEventListener('click',(e)=>{
+  console.log(e.target)
+})
