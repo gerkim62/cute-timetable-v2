@@ -82,7 +82,7 @@ document.getElementById('discard').addEventListener('click', () => {
 
 async function fullscreenTimetable() {
   console.log('started...')
-  lockScreenToLandscape(timetableContainer_div)
+  lockScreenToLandscape(timetableContainer_div.parentNode)
 
 
 
