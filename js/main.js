@@ -20,9 +20,10 @@ hide(propertiesCard_div)
 const timetable_obj = JSON.parse(localStorage.getItem('timetable_obj'))
 const prefersFullscreen = JSON.parse(localStorage.getItem('prefersFullscreen'))
 console.log(prefersFullscreen)
-//console.log((timetable_obj))
+
 if (timetable_obj) showTimetable(timetable_obj)
 
+if(prefersFullscreen)fullscreenTimetable()
 
 //document.onclick = lockScreenToLandscape
 
