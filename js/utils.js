@@ -98,12 +98,12 @@ export function downloadImage(dataUrl, name) {
   link.download = fileName;
 
   // Append the link to the DOM
-  document.body.appendChild(link);
+  document.body.append(link);
 
   // Click the link to download the image
   link.click();
 
   // Remove the link from the DOM
-  document.body.removeChild(link);
+  document.body.remove(link);
 }
 
