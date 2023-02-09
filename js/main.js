@@ -163,5 +163,5 @@ addEventListener('click',(e)=>{
 updatePreferredCoursesIdentifier({identifier:'venue',courses:timetable_obj.courses,timetableContainer:timetableContainer_div})
 
 coursesIdentifier_select.addEventListener('change',(e)=>{
-  console.log(e.target)
+  console.log(e.target.querySelectorAll('option'))
 })
