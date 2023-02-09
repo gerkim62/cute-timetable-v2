@@ -57,11 +57,11 @@ document.addEventListener("fullscreenchange", () => {
   const isFullscreen = !!document.fullscreenElement;
 
   if (isFullscreen) {
-    show(document.getElementById('download'))
+    hide(document.getElementById('download'))
     timetableContainer_div.parentNode.classList.add('d-flex')
   }
   else {
-    hide(document.getElementById('download'))
+    show(document.getElementById('download'))
     timetableContainer_div.parentNode.classList.remove('d-flex')
   }
 })
