@@ -70,7 +70,7 @@ export async function convertElementToImage(element, options) {
         transform: 'scale(' + scale + ')',
         transformOrigin: 'top left',
         width: element.offsetWidth + "px",
-        height: element.offsetHeight +50+ "px"
+        height: element.offsetHeight + "px"
       }
     
     const imageOptions = {
