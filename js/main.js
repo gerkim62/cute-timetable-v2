@@ -160,4 +160,4 @@ addEventListener('click',(e)=>{
   hide(propertiesCard_div)
 })
 
-updatePreferredCoursesIdentifier({identifier:'code',courses:timetable_obj.courses,timetableContainer:timetableContainer_div})
+updatePreferredCoursesIdentifier({identifier:'venue',courses:timetable_obj.courses,timetableContainer:timetableContainer_div})
