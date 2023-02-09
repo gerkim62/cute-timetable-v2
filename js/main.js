@@ -151,7 +151,7 @@ function showTimetable({ courses, title }) {
   }
 }
 
-addEventListener('mouseenter',(e)=>{
+addEventListener('click',(e)=>{
   const target = e.target
   console.log(target)
   if(timetableContainer_div.contains(target)||target==propertiesCard_div||propertiesCard_div.contains(target)) return
