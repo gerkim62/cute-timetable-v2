@@ -109,7 +109,7 @@ export function showUploadUI(){
 export function updatePreferredCoursesIdentifier({identifier, courses, timetableContainer}){
   if(!courses) return console.log('no courses exist')
   Array.from(timetableContainer.querySelectorAll('td.scheduled')).forEach(td=>{
-    const code = td.getAttribute('code')
+    const code = td.getAttribute('data-code')
     console.log(code)
   })
 }
