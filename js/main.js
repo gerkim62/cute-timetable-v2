@@ -56,11 +56,20 @@ timetableDetails_form.addEventListener('submit', async (e) => {
 document.addEventListener("fullscreenchange", () => {
   const isFullscreen = !!document.fullscreenElement;
 
-  if (isFullscreen) timetableContainer_div.parentNode.classList.add('d-flex')
-  else timetableContainer_div.parentNode.classList.remove('d-flex')
+  if (isFullscreen) {
+    show(document.getElementById('download'))
+    timetableContainer_div.parentNode.classList.add('d-flex')
+  }
+  else {
+       hide(document.getElementById('download'))
+    timetableContainer_div.parentNode.classList.remove('d-flex')
+  }
 })
 
+document.getElementById('fullscreen').addEventListener('click', fullscreenTimetable)
+
 document.getElementById('download').addEventListener('click', downloadTimetable)
+
 
 document.getElementById('discard').addEventListener('click', () => {
 
@@ -71,16 +80,20 @@ document.getElementById('discard').addEventListener('click', () => {
 
 })
 
-async function downloadTimetable() {
+async function fullscreenTimetable() {
   console.log('started...')
   lockScreenToLandscape(timetableContainer_div.parentNode)
-  console.log('downloadTimetable')
 
+
+
+
+
+}
+
+function downloadTimetable() {
   const img = await convertElementToImage(timetableContainer_div)
   console.log(timetableContainer_div)
   downloadImage(img, `timetable-${new Date().toUTCString()}.png`)
-
-
 
 }
 
