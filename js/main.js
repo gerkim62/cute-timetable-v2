@@ -18,12 +18,12 @@ const closePropertiesCard_button = document.getElementById('close-properties')
 hideTimetableUI()
 hide(propertiesCard_div)
 const timetable_obj = JSON.parse(localStorage.getItem('timetable_obj'))
-const prefersFullscreen = JSON.parse(localStorage.getItem('prefersFullscreen'))
-console.log(prefersFullscreen)
+//const prefersFullscreen = JSON.parse(localStorage.getItem('prefersFullscreen'))
+//console.log(prefersFullscreen)
 
 if (timetable_obj) showTimetable(timetable_obj)
 
-if(prefersFullscreen)fullscreenTimetable()
+//if(prefersFullscreen)fullscreenTimetable()
 
 //document.onclick = lockScreenToLandscape
 
@@ -184,7 +184,7 @@ coursesIdentifier_select.addEventListener('change', (e) => {
   timetable_obj && updatePreferredCoursesIdentifier({ identifier: preferredCoursesIdentifier, courses: timetable_obj.courses, timetableContainer: timetableContainer_div })
 })
 
-document.getElementById('auto-fullscreen').addEventListener('change',e=>{
+/*document.getElementById('auto-fullscreen').addEventListener('change',e=>{
   if(e.target.checked){
     console.log('selected')
     localStorage.setItem('prefersFullscreen',true)
@@ -192,4 +192,4 @@ document.getElementById('auto-fullscreen').addEventListener('change',e=>{
     console.log('unchecked')
     localStorage.setItem('prefersFullscreen',false)
   }
-})
+})*/
