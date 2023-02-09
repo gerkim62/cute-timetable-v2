@@ -141,6 +141,7 @@ function showTimetable({ courses, title }) {
         if (enteredPropertiesCard) {
           //const code = e.target.getAttribute('data-code');
           hide(propertiesCard_div);
+          console.log(e.target)
         }
       });
 
