@@ -5,7 +5,7 @@ const CACHE_NAME = "v2";
 const assetsToCache = [
   "/index.html",
   "/",
-  "/pages/offline.html",
+  
 
   "/css/main.css",
   "/css/loader.css",
@@ -62,7 +62,7 @@ self.addEventListener("fetch", event => {
 
         return response;
       }).catch(error => {
-        return caches.match("/pages/offline.html");
+        //return caches.match("/pages/offline.html");
       });
     })
   );

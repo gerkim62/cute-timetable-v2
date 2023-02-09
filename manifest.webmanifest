@@ -6,7 +6,7 @@
     "start_url": "/",
     "name": "Cute Timetable",
     "short_name": "Timetable",
-    "fallback_page":"/pages/offline.html",
+    
     "description": "Convert CSV timetable to good looking one",
     "icons": [
         {
