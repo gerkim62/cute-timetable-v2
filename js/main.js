@@ -183,7 +183,7 @@ coursesIdentifier_select.addEventListener('change', (e) => {
   timetable_obj && updatePreferredCoursesIdentifier({ identifier: preferredCoursesIdentifier, courses: timetable_obj.courses, timetableContainer: timetableContainer_div })
 })
 
-document.getElementById('auto-fullscreen').addEventListener('change',()=>{
+document.getElementById('auto-fullscreen').addEventListener('change',e=>{
   if(e.target.selected){
     localStorage.setItem('prefersFullscreen',true)
   }else{
