@@ -18,7 +18,7 @@ const closePropertiesCard_button = document.getElementById('close-properties')
 hideTimetableUI()
 hide(propertiesCard_div)
 const timetable_obj = JSON.parse(localStorage.getItem('timetable_obj'))
-const prefersFullscreen = JSON.parse(localStorage.getItem('prefersFullscreen'))==='true'
+const prefersFullscreen = JSON.parse(localStorage.getItem('prefersFullscreen'))
 console.log(prefersFullscreen)
 //console.log((timetable_obj))
 if (timetable_obj) showTimetable(timetable_obj)
