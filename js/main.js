@@ -61,7 +61,7 @@ document.addEventListener("fullscreenchange", () => {
     timetableContainer_div.parentNode.classList.add('d-flex')
   }
   else {
-       hide(document.getElementById('download'))
+    hide(document.getElementById('download'))
     timetableContainer_div.parentNode.classList.remove('d-flex')
   }
 })
@@ -90,7 +90,7 @@ async function fullscreenTimetable() {
 
 }
 
-function downloadTimetable() {
+async function downloadTimetable() {
   const img = await convertElementToImage(timetableContainer_div)
   console.log(timetableContainer_div)
   downloadImage(img, `timetable-${new Date().toUTCString()}.png`)
