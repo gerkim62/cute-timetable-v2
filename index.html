@@ -316,10 +316,10 @@
       const file = fileInput.files[0];
 
       if (file) {
-        const fileName = file.name;
+        const fileName = file.name.toUpperCase();
         const fileExtension = fileName.substr(fileName.lastIndexOf('.') + 1);
 
-        if (fileExtension !== 'csv') {
+        if (fileExtension.includes('CSV')) {
           fileInput.setCustomValidity('Uploaded a CSV file. '+fileExtension+' is not allowed.');
         } else {
           fileInput.setCustomValidity('');
