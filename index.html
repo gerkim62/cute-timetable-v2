@@ -316,7 +316,8 @@
       const file = fileInput.files[0];
 
       if (file) {
-        const fileName = file.name.toUpperCase();
+        const fileName = (file.name).toUpperCase();
+        console.log(fileName)
         const fileExtension = fileName.substr(fileName.lastIndexOf('.') + 1);
 
         if (fileExtension.includes('CSV')) {
