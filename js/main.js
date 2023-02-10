@@ -199,7 +199,9 @@ coursesIdentifier_select.addEventListener('change', (e) => {
 
 hide(document.getElementById('spinner'));
 
-
+const isPWAInstalled = () => {
+  return window.matchMedia('(display-mode: standalone)').matches;
+};
 
 
 //deferred events for sw
@@ -212,9 +214,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
 });
 
 
-const isPWAInstalled = () => {
-  return window.matchMedia('(display-mode: standalone)').matches;
-};
+
 
 if (isPWAInstalled()) {
   console.log('PWA is already installed on this device');
