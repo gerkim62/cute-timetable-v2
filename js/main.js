@@ -212,3 +212,12 @@ window.addEventListener('beforeinstallprompt', (event) => {
 });
 
 
+const isPWAInstalled = () => {
+  return window.matchMedia('(display-mode: standalone)').matches;
+};
+
+if (isPWAInstalled()) {
+  console.log('PWA is already installed on this device');
+} else {
+  console.log('PWA is not installed on this device');
+}
