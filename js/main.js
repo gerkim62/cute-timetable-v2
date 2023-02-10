@@ -1,7 +1,7 @@
 import { timetableDetails_form, csvUpload_input, timetableTitle_input, timetableContainer_div, timetableDetailsUI_div, coursesIdentifier_select } from './dom.js'
 import { getCSVStringFrom, cleanCSVString, getCourses, getDays, getTimestamps } from './csvParser.js'
 import createTimetable from './table-creator.js'
-import { lockScreenToLandscape, unlockScreenFromLandscape, showUploadUI, hideUploadUI, showTimetableUI, hideTimetableUI, updatePreferredCoursesIdentifier } from './ui.js'
+import { lockScreenToLandscape, unlockScreenFromLandscape, showUploadUI, hideUploadUI, showTimetableUI, hideTimetableUI, updatePreferredCoursesIdentifier, showCustomInstallPrompt } from './ui.js'
 import { convertElementToImage, downloadImage } from './utils.js'
 
 //todo:move this to their file 
