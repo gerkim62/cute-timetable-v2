@@ -322,7 +322,7 @@
         console.log(fileExtension)
 
         if (!fileExtension.includes('CSV')) {
-          fileInput.setCustomValidity('Uploaded a CSV file. '+fileExtension+' is not allowed.');
+          fileInput.setCustomValidity('Please upload a CSV file. '+fileExtension+' files are not allowed.');
         } else {
           fileInput.setCustomValidity('');
         }
