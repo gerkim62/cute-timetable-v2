@@ -320,7 +320,7 @@
         const fileExtension = fileName.substr(fileName.lastIndexOf('.') + 1);
 
         if (fileExtension !== 'csv') {
-          fileInput.setCustomValidity('Only .csv files are allowed');
+          fileInput.setCustomValidity('Uploaded a CSV file. '+fileExtension+' is not allowed.');
         } else {
           fileInput.setCustomValidity('');
         }
