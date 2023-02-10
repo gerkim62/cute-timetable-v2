@@ -36,6 +36,19 @@
   <script>
     eruda.init();
   </script>
+  
+  <script type="text/javascript" charset="utf-8">
+    //service worker registration
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/serviceWorker.js').then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
 
   <style>
     @media only screen and (max-width: 400px) {
