@@ -317,8 +317,9 @@
 
       if (file) {
         const fileName = (file.name).toUpperCase();
-        console.log(fileName)
+        
         const fileExtension = fileName.substr(fileName.lastIndexOf('.') + 1);
+        console.log(fileExtension)
 
         if (fileExtension.includes('CSV')) {
           fileInput.setCustomValidity('Uploaded a CSV file. '+fileExtension+' is not allowed.');
