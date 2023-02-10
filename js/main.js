@@ -203,7 +203,7 @@ hide(document.getElementById('spinner'));
 
 
 //deferred events for sw
-let prompted = false
+let prompted = isPWAInstalled()
 window.addEventListener('beforeinstallprompt', (event) => {
   if (prompted) return
   event.preventDefault();
