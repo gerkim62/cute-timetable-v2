@@ -1,4 +1,4 @@
-import { timetableUI_divs, timetableDetailsUI_div } from './dom.js'
+import { timetableUI_divs, timetableDetailsUI_div, customInstallUI, customInstallButton, notNowButton } from './dom.js'
 
 /**
  * showCustomInstallPrompt - shows a custom installation prompt to the user
