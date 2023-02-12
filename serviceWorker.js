@@ -1,7 +1,7 @@
 console.log('from sw')
 
 
-const CACHE_NAME = "v3";
+const CACHE_NAME = "v4";
 const assetsToCache = [
   "index.html",
   "/",
