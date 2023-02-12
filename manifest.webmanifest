@@ -37,13 +37,14 @@
             }
     ],
 "file_handlers": [
-  {
-  "action": "/viewer/?file=",
-  "accept": {
-  "text/csv": {}
-  }
-  }
+    {
+      "name": "CSV Files",
+      "accept": [
+        "csv"
+      ]
+    }
   ]
+  
   
   
   
