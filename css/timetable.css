@@ -51,6 +51,7 @@ table th{
   color:var(--color-primary)40;
  color: rgba(101, 104, 211, .85);
  color:yellow;
+ text-align: center ;
 }
 
 table th:first-child{
