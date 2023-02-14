@@ -144,6 +144,11 @@ table td.below-unscheduled {
 table td.unscheduled {
   background: transparent;
   color: rgba(255, 255, 255, .5);
+ 
+}
+
+td{
+  text-align: center;
 }
 
 th.day{
