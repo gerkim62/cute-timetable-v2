@@ -12,7 +12,7 @@ import {formatTimestamps, formatTimestamp} from './utils.js'
  * @param {String} options.blankCellLabel - the label for the blank cells in the timetable table
  * @return {HTMLTableElement} - the created timetable table element
  */
- function createBlankTimetable({ leftHeaders, topHeaders, intersection='<p>Time➡️</p> <p>Days⬇️</p>', blankCellLabel }) {
+ function createBlankTimetable({ leftHeaders, topHeaders, intersection='<p>Time</p> <p>Days</p>', blankCellLabel }) {
   const timetable_table = document.createElement('table')
 
 
@@ -33,6 +33,7 @@ import {formatTimestamps, formatTimestamp} from './utils.js'
     const leftHeader_tr = document.createElement('tr')
 
     const headerName_th = document.createElement('th')
+    
     headerName_th.innerHTML = leftHeader
     headerName_th.classList.add('day')
     leftHeader_tr.append(headerName_th)

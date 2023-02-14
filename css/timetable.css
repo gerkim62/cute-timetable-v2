@@ -155,6 +155,7 @@ td{
 th.day{
   border-bottom: 1px solid white;
   text-transform: uppercase;
+  text-align: left;
 }
 
 th.day + td{
