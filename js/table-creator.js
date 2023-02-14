@@ -69,6 +69,10 @@ import {formatTimestamps, formatTimestamp} from './utils.js'
       const formartedTimestamp = formatTimestamp(day.timestamps)
 
       const target_td = finalTimetable.querySelector(`[data-top-header="${formartedTimestamp}"][data-left-header="${day.name}"]`);
+      const initialInnerHTML = target_td.innerHTML;
+      if(initialInnerHTML==unscheduledLabel){
+        alert('Your timetable has a clash at "'+formatTimestamp+'" on '+day.name);
+      }
       target_td.textContent = course[coursesIdentifier]
       //console.log(course[coursesIdentifier], course)
       target_td.setAttribute(`data-color`, course.color);

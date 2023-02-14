@@ -102,15 +102,16 @@ async function downloadTimetable() {
 }
 
 function showProperties(courseCode, courses) {
+  const unspecifiedCourseInfo = 'Unspecified';
   courses.forEach(course => {
     if (course.code === courseCode) {
       courseCode_p.innerHTML = course.code
-      courseGroup_p.innerHTML = course.option
-      courseTitle_p.innerHTML = course.title
-      courseVenue_p.innerHTML = course.venue
-      courseBuilding_p.innerHTML = course.building
-      courseLocation_p.innerHTML = course.location
-      courseInstructor_p.innerHTML = course.instructor
+      courseGroup_p.innerHTML = course.option||unspecifiedCourseInfo
+      courseTitle_p.innerHTML = course.title||unspecifiedCourseInfo
+      courseVenue_p.innerHTML = course.venue||unspecifiedCourseInfo
+      courseBuilding_p.innerHTML = course.building||unspecifiedCourseInfo
+      courseLocation_p.innerHTML = course.location||unspecifiedCourseInfo
+      courseInstructor_p.innerHTML = course.instructor||unspecifiedCourseInfo
 
       show(propertiesCard_div)
     }
