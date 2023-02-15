@@ -1,1 +1,1 @@
-export const UNSCHEDULED_CLASS_LABEL = '―'
+export const UNSCHEDULED_CLASS_LABEL = 'No Class'
